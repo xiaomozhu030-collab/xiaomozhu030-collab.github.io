@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Your Name</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --accent:#4aa3b5; /* soft teal similar to screenshot */
+      --text:#1b3542;   /* dark slate */
+      --muted:#5a7a89;  /* muted slate */
+      --bg:#f9fcfd;     /* very light */
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";color:var(--text);background:var(--bg);}
+    .container{max-width:1060px;margin:0 auto;padding:24px 20px 64px;}
+    header{display:flex;align-items:center;justify-content:space-between;padding:12px 0 24px;border-bottom:1px solid #eaf1f4;margin-bottom:28px}
+    .brand{font-size:28px;font-weight:700;letter-spacing:0.2px}
+    .brand span{color:var(--accent)}
+    nav a{margin-left:22px;text-decoration:none;color:var(--accent);font-weight:600}
+    nav a:hover{text-decoration:underline}
+
+    .grid{display:grid;grid-template-columns:1.2fr 0.8fr;gap:36px;align-items:start}
+    @media (max-width:900px){.grid{grid-template-columns:1fr}}
+
+    h2{font-size:18px;margin:24px 0 10px;color:var(--muted)}
+    p{line-height:1.72}
+    ul{margin:10px 0 0 20px}
+    li{margin:6px 0}
+    .hero-img{width:100%;border-radius:10px;box-shadow:0 6px 28px rgba(0,0,0,.06)}
+
+    .contact a{color:var(--accent)}
+    .cv-btn{display:inline-block;margin-left:6px;padding:4px 10px;border-radius:6px;background:#e8f4f7;color:var(--accent);text-decoration:none}
+    footer{margin-top:40px;color:#7a98a6;font-size:14px}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand"><span>Your</span> Name（中文名）</div>
+      <nav>
+        <a href="#">Home</a>
+        <a href="research.html">Research</a>
+        <a href="teaching.html">Discussion&Teach</a>
+      </nav>
+    </header>
+
+    <div class="grid">
+      <main>
+        <p><strong>Title / Affiliation</strong>. <a class="cv-btn" href="cv.pdf" target="_blank">Curriculum Vitae</a></p>
+        <p class="contact">Contact: youremail [at] uni.edu · <a href="https://twitter.com/" target="_blank">@yourhandle</a></p>
+
+        <h2>Biography:</h2>
+        <p>
+          Briefly introduce your research agenda in 3–5 sentences. Mention fields, approach (empirical/theory), and current focus. Keep the paragraph concise and friendly.
+        </p>
+
+        <h2>Education:</h2>
+        <ul>
+          <li>Ph.D. in XX, University of XX (YYYY–YYYY)</li>
+          <li>B.S. in XX, University of XX (YYYY–YYYY)</li>
+        </ul>
+
+        <h2>Research Interests:</h2>
+        <ul>
+          <li>Field 1</li>
+          <li>Field 2</li>
+          <li>Field 3</li>
+        </ul>
+
+        <h2>First Name Pronunciation:</h2>
+        <ul>
+          <li>"Xiao-mo". Add an audio snippet if you like.</li>
+        </ul>
+      </main>
+
+      <aside>
+        <img src="photo.jpg" alt="Your portrait" class="hero-img" />
+      </aside>
+    </div>
+
+    <footer>
+      © <span id="year"></span> Your Name · Last updated <span id="updated"></span>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent=new Date().getFullYear();
+    document.getElementById('updated').textContent=new Date().toISOString().slice(0,10);
+  </script>
+</body>
+</html>
