@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,111 +8,171 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f6f8fa;
-            color: #333;
             margin: 0;
             padding: 0;
+            background-color: #f9fcfd;
+            color: #2b2b2b;
         }
+
         header {
-            background-color: #ffffff;
+            background-color: white;
+            padding: 40px;
             border-bottom: 2px solid #eaeaea;
-            padding: 20px;
+            text-align: center;
         }
-        .container {
-            width: 90%;
-            margin: 0 auto;
-        }
-        h1 {
+
+        header h1 {
             font-size: 36px;
             color: #4a90e2;
         }
-        p, h2 {
-            font-size: 16px;
-            line-height: 1.6;
+
+        header p {
+            font-size: 18px;
+            margin: 10px 0;
         }
-        .content {
-            display: flex;
-            margin-top: 40px;
+
+        header a {
+            text-decoration: none;
+            color: #4a90e2;
         }
-        .content .left {
-            flex: 1;
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px;
         }
-        .content .right {
-            flex: 0.4;
-            margin-left: 20px;
+
+        .grid {
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 40px;
         }
-        img {
+
+        .grid img {
             width: 100%;
             border-radius: 10px;
         }
-        a {
-            color: #4a90e2;
-            text-decoration: none;
+
+        h2 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 20px;
         }
-        .cv-btn {
-            padding: 5px 10px;
-            background-color: #e4f2fb;
-            border-radius: 4px;
-            border: 1px solid #e1e1e1;
-            color: #4a90e2;
-            text-decoration: none;
+
+        ul {
+            margin: 0;
+            padding-left: 20px;
         }
+
+        ul li {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
         footer {
-            background-color: #ffffff;
-            padding: 10px;
+            background-color: white;
+            padding: 20px;
             text-align: center;
-            border-top: 1px solid #eaeaea;
+            margin-top: 40px;
+            border-top: 2px solid #eaeaea;
+        }
+
+        footer p {
+            font-size: 14px;
+            color: #7a98a6;
+        }
+
+        footer a {
+            color: #4a90e2;
+            text-decoration: none;
+        }
+
+        .cv-btn {
+            background-color: #e8f4f7;
+            padding: 8px 16px;
+            border-radius: 6px;
+            text-decoration: none;
+            color: #4a90e2;
+            border: 1px solid #e1e1e1;
+        }
+
+        .language-selector {
+            position: absolute;
+            top: 40px;
+            right: 40px;
+        }
+
+        .language-selector a {
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 18px;
+            color: #4a90e2;
+        }
+
+        .language-selector a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
-<body>
 
+<body>
     <header>
-        <div class="container">
-            <h1>Xuelin Li (李学林)</h1>
-            <p>Assistant Professor of Finance, Columbia Business School. <a href="cv.pdf" class="cv-btn" target="_blank">Curriculum Vitae</a></p>
-            <p>Contact: <a href="mailto:xuelin.li@columbia.edu">xuelin.li@columbia.edu</a> | <a href="https://twitter.com/XuelinLester" target="_blank">@XuelinLester</a></p>
+        <div class="language-selector">
+            <a href="#">English</a> | <a href="#">中文</a>
         </div>
+        <h1>Xuelin Li (李学林)</h1>
+        <p>Assistant Professor of Finance, Columbia Business School</p>
+        <p>Contact: <a href="mailto:xuelin.li@columbia.edu">xuelin.li@columbia.edu</a> | <a href="https://twitter.com/XuelinLester" target="_blank">@XuelinLester</a></p>
+        <p><a href="cv.pdf" class="cv-btn" target="_blank">Curriculum Vitae</a></p>
     </header>
 
-    <div class="container content">
-        <div class="left">
-            <section>
-                <h2>Biography</h2>
-                <p>My research bridges the studies on finance and healthcare, which are two crucial academic fields in the broad economic literature. The connection is through classical decisions in corporate finance: financing and investment. I utilize novel datasets on granular operation and innovation information in the healthcare industry and apply empirical and theoretical methods from finance to study these issues.</p>
-            </section>
+    <div class="container">
+        <div class="grid">
+            <div class="left">
+                <section>
+                    <h2>Biography</h2>
+                    <p>My research bridges the studies on finance and healthcare, which are two crucial academic fields in the broad economic literature. The connection is through two classical decisions in corporate finance: financing and investment. To conduct this research, I utilize novel datasets on granular operation and innovation information in the healthcare industry and apply both empirical and theoretical methods from finance.</p>
+                </section>
 
-            <section>
-                <h2>Education</h2>
-                <ul>
-                    <li>Ph.D. in Finance, University of Minnesota (09/2014 – 06/2020)</li>
-                    <li>Bachelor of Science in Finance, Peking University (09/2010 – 06/2014)</li>
-                </ul>
-            </section>
+                <section>
+                    <h2>Education</h2>
+                    <ul>
+                        <li>Ph.D. in Finance, University of Minnesota (09/2014 – 06/2020)</li>
+                        <li>Bachelor of Science in Finance, Peking University (09/2010 – 06/2014)</li>
+                    </ul>
+                </section>
 
-            <section>
-                <h2>Research Interests</h2>
-                <ul>
-                    <li>Healthcare Finance</li>
-                    <li>Innovation</li>
-                    <li>Entrepreneurial Finance</li>
-                    <li>Information Economics</li>
-                </ul>
-            </section>
-        </div>
-        
-        <div class="right">
-            <img src="photo.jpg" alt="Your Portrait">
+                <section>
+                    <h2>Research Interests</h2>
+                    <ul>
+                        <li>Healthcare Finance</li>
+                        <li>Innovation</li>
+                        <li>Entrepreneurial Finance</li>
+                        <li>Information Economics</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Publications</h2>
+                    <ul>
+                        <li><a href="#">Find and Replace: R&D Investment Following the Erosion of Existing Products</a></li>
+                        <li><a href="#">Common Ownership and Innovation Efficiency</a></li>
+                        <li><a href="#">Merchants of Death: The Effect of Credit Supply Shocks on Hospital Outcomes</a></li>
+                    </ul>
+                </section>
+            </div>
+            <div class="right">
+                <img src="photo.jpg" alt="Xuelin Li Portrait">
+            </div>
         </div>
     </div>
 
     <footer>
         <p>&copy; 2025 Xuelin Li | Last updated: <span id="updated"></span></p>
+        <script>
+            document.getElementById("updated").textContent = new Date().toISOString().slice(0, 10);
+        </script>
     </footer>
-
-    <script>
-        document.getElementById("updated").textContent = new Date().toISOString().slice(0, 10);
-    </script>
-    
 </body>
+
 </html>
