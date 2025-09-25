@@ -4,60 +4,114 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Xuelin Li's Academic Homepage</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f6f8fa;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #ffffff;
+            border-bottom: 2px solid #eaeaea;
+            padding: 20px;
+        }
+        .container {
+            width: 90%;
+            margin: 0 auto;
+        }
+        h1 {
+            font-size: 36px;
+            color: #4a90e2;
+        }
+        p, h2 {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        .content {
+            display: flex;
+            margin-top: 40px;
+        }
+        .content .left {
+            flex: 1;
+        }
+        .content .right {
+            flex: 0.4;
+            margin-left: 20px;
+        }
+        img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        a {
+            color: #4a90e2;
+            text-decoration: none;
+        }
+        .cv-btn {
+            padding: 5px 10px;
+            background-color: #e4f2fb;
+            border-radius: 4px;
+            border: 1px solid #e1e1e1;
+            color: #4a90e2;
+            text-decoration: none;
+        }
+        footer {
+            background-color: #ffffff;
+            padding: 10px;
+            text-align: center;
+            border-top: 1px solid #eaeaea;
+        }
+    </style>
 </head>
 <body>
+
     <header>
         <div class="container">
             <h1>Xuelin Li (李学林)</h1>
-            <p>Assistant Professor of Finance, Columbia Business School</p>
-            <p>Contact: <a href="mailto:xuelin.li@columbia.edu">xuelin.li@columbia.edu</a> | <a href="https://twitter.com/XuelinLester">@XuelinLester</a></p>
+            <p>Assistant Professor of Finance, Columbia Business School. <a href="cv.pdf" class="cv-btn" target="_blank">Curriculum Vitae</a></p>
+            <p>Contact: <a href="mailto:xuelin.li@columbia.edu">xuelin.li@columbia.edu</a> | <a href="https://twitter.com/XuelinLester" target="_blank">@XuelinLester</a></p>
         </div>
     </header>
 
-    <section id="bio">
-        <div class="container">
-            <h2>Biography</h2>
-            <p>My research bridges the studies on finance and healthcare, two crucial academic fields in the broad economic literature. The connection is through classical decisions in corporate finance: financing and investment. I use novel datasets on granular operation and innovation information in the healthcare industry and apply empirical and theoretical methods from finance to study these issues. My research focuses on financing U.S. hospital industries and innovation investments in the healthcare industry.</p>
-        </div>
-    </section>
+    <div class="container content">
+        <div class="left">
+            <section>
+                <h2>Biography</h2>
+                <p>My research bridges the studies on finance and healthcare, which are two crucial academic fields in the broad economic literature. The connection is through classical decisions in corporate finance: financing and investment. I utilize novel datasets on granular operation and innovation information in the healthcare industry and apply empirical and theoretical methods from finance to study these issues.</p>
+            </section>
 
-    <section id="education">
-        <div class="container">
-            <h2>Education</h2>
-            <ul>
-                <li>Ph.D. in Finance, University of Minnesota (09/2014 – 06/2020)</li>
-                <li>Bachelor of Science in Finance, Peking University (09/2010 – 06/2014)</li>
-            </ul>
-        </div>
-    </section>
+            <section>
+                <h2>Education</h2>
+                <ul>
+                    <li>Ph.D. in Finance, University of Minnesota (09/2014 – 06/2020)</li>
+                    <li>Bachelor of Science in Finance, Peking University (09/2010 – 06/2014)</li>
+                </ul>
+            </section>
 
-    <section id="research">
-        <div class="container">
-            <h2>Research Interests</h2>
-            <ul>
-                <li>Healthcare Finance</li>
-                <li>Innovation</li>
-                <li>Corporate Finance</li>
-            </ul>
+            <section>
+                <h2>Research Interests</h2>
+                <ul>
+                    <li>Healthcare Finance</li>
+                    <li>Innovation</li>
+                    <li>Entrepreneurial Finance</li>
+                    <li>Information Economics</li>
+                </ul>
+            </section>
         </div>
-    </section>
-
-    <section id="cv">
-        <div class="container">
-            <h2>Curriculum Vitae</h2>
-            <p>Download my <a href="cv.pdf" target="_blank">CV here</a>.</p>
+        
+        <div class="right">
+            <img src="photo.jpg" alt="Your Portrait">
         </div>
-    </section>
+    </div>
 
     <footer>
-        <div class="container">
-            <p>&copy; 2025 Xuelin Li | Last updated: <span id="updated"></span></p>
-        </div>
+        <p>&copy; 2025 Xuelin Li | Last updated: <span id="updated"></span></p>
     </footer>
 
     <script>
         document.getElementById("updated").textContent = new Date().toISOString().slice(0, 10);
     </script>
+    
 </body>
 </html>
