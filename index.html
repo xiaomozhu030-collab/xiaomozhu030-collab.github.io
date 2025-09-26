@@ -4,96 +4,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Xuelin Li's Academic Homepage</title>
+    <title>Your Name</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap">
     <style>
+        :root {
+            --accent: #4aa3b5;
+            --text: #1b3542;
+            --muted: #5a7a89;
+            --bg: #f9fcfd;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: Arial, sans-serif;
             margin: 0;
-            padding: 0;
-            background-color: #f9fcfd;
-            color: #2b2b2b;
+            font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji",
+                "Segoe UI Emoji";
+            color: var(--text);
+            background: var(--bg);
         }
 
         header {
-            background-color: white;
-            padding: 40px;
-            border-bottom: 2px solid #eaeaea;
-            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 0 24px;
+            border-bottom: 1px solid #eaf1f4;
+            margin-bottom: 28px;
         }
 
-        header h1 {
-            font-size: 36px;
-            color: #4a90e2;
+        .brand {
+            font-size: 28px;
+            font-weight: 700;
+            letter-spacing: 0.2px;
         }
 
-        header p {
-            font-size: 18px;
-            margin: 10px 0;
+        .brand span {
+            color: var(--accent);
         }
 
-        header a {
+        nav a {
+            margin-left: 22px;
             text-decoration: none;
-            color: #4a90e2;
+            color: var(--accent);
+            font-weight: 600;
         }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 40px;
+        nav a:hover {
+            text-decoration: underline;
         }
 
         .grid {
             display: grid;
-            grid-template-columns: 3fr 1fr;
-            gap: 40px;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 36px;
+            align-items: start;
         }
 
-        .grid img {
-            width: 100%;
-            border-radius: 10px;
+        @media (max-width: 900px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
         }
 
         h2 {
-            font-size: 24px;
-            color: #333;
-            margin-bottom: 20px;
+            font-size: 18px;
+            margin: 24px 0 10px;
+            color: var(--muted);
+        }
+
+        p {
+            line-height: 1.72;
         }
 
         ul {
-            margin: 0;
-            padding-left: 20px;
+            margin: 10px 0 0 20px;
         }
 
-        ul li {
-            font-size: 18px;
-            line-height: 1.6;
+        li {
+            margin: 6px 0;
         }
 
-        footer {
-            background-color: white;
-            padding: 20px;
-            text-align: center;
-            margin-top: 40px;
-            border-top: 2px solid #eaeaea;
+        .hero-img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 6px 28px rgba(0, 0, 0, 0.06);
         }
 
-        footer p {
-            font-size: 14px;
-            color: #7a98a6;
-        }
-
-        footer a {
-            color: #4a90e2;
-            text-decoration: none;
+        .contact a {
+            color: var(--accent);
         }
 
         .cv-btn {
-            background-color: #e8f4f7;
-            padding: 8px 16px;
+            display: inline-block;
+            margin-left: 6px;
+            padding: 4px 10px;
             border-radius: 6px;
+            background: #e8f4f7;
+            color: var(--accent);
             text-decoration: none;
-            color: #4a90e2;
-            border: 1px solid #e1e1e1;
+        }
+
+        footer {
+            margin-top: 40px;
+            color: #7a98a6;
+            font-size: 14px;
+            text-align: center;
         }
 
         .language-selector {
@@ -106,7 +123,7 @@
             text-decoration: none;
             margin: 0 10px;
             font-size: 18px;
-            color: #4a90e2;
+            color: var(--accent);
         }
 
         .language-selector a:hover {
@@ -116,63 +133,60 @@
 </head>
 
 <body>
-    <header>
-        <div class="language-selector">
-            <a href="#">English</a> | <a href="#">中文</a>
-        </div>
-        <h1>Xuelin Li (李学林)</h1>
-        <p>Assistant Professor of Finance, Columbia Business School</p>
-        <p>Contact: <a href="mailto:xuelin.li@columbia.edu">xuelin.li@columbia.edu</a> | <a href="https://twitter.com/XuelinLester" target="_blank">@XuelinLester</a></p>
-        <p><a href="cv.pdf" class="cv-btn" target="_blank">Curriculum Vitae</a></p>
-    </header>
-
     <div class="container">
+        <header>
+            <div class="brand"><span>Your</span> Name（中文名）</div>
+            <nav>
+                <a href="#">Home</a>
+                <a href="research.html">Research</a>
+                <a href="discussion&teach.html">Discussion&Teach</a>
+            </nav>
+        </header>
+
         <div class="grid">
-            <div class="left">
-                <section>
-                    <h2>Biography</h2>
-                    <p>My research bridges the studies on finance and healthcare, which are two crucial academic fields in the broad economic literature. The connection is through two classical decisions in corporate finance: financing and investment. To conduct this research, I utilize novel datasets on granular operation and innovation information in the healthcare industry and apply both empirical and theoretical methods from finance.</p>
-                </section>
+            <main>
+                <p><strong>Title / Affiliation</strong>. <a class="cv-btn" href="cv.pdf" target="_blank">Curriculum Vitae</a></p>
+                <p class="contact">Contact: youremail [at] uni.edu · <a href="https://twitter.com/" target="_blank">@yourhandle</a></p>
 
-                <section>
-                    <h2>Education</h2>
-                    <ul>
-                        <li>Ph.D. in Finance, University of Minnesota (09/2014 – 06/2020)</li>
-                        <li>Bachelor of Science in Finance, Peking University (09/2010 – 06/2014)</li>
-                    </ul>
-                </section>
+                <h2>Biography:</h2>
+                <p>
+                    My research bridges the studies on finance and healthcare, which are two crucial academic fields in the broad economic literature. The connection is through two classical decisions in corporate finance: financing and investment. To conduct this research, I utilize novel datasets on granular operation and innovation information in the healthcare industry and apply both empirical and theoretical methods from finance.
+                </p>
 
-                <section>
-                    <h2>Research Interests</h2>
-                    <ul>
-                        <li>Healthcare Finance</li>
-                        <li>Innovation</li>
-                        <li>Entrepreneurial Finance</li>
-                        <li>Information Economics</li>
-                    </ul>
-                </section>
+                <h2>Education:</h2>
+                <ul>
+                    <li>Ph.D. in XX, University of XX (YYYY–YYYY)</li>
+                    <li>B.S. in XX, University of XX (YYYY–YYYY)</li>
+                </ul>
 
-                <section>
-                    <h2>Publications</h2>
-                    <ul>
-                        <li><a href="#">Find and Replace: R&D Investment Following the Erosion of Existing Products</a></li>
-                        <li><a href="#">Common Ownership and Innovation Efficiency</a></li>
-                        <li><a href="#">Merchants of Death: The Effect of Credit Supply Shocks on Hospital Outcomes</a></li>
-                    </ul>
-                </section>
-            </div>
-            <div class="right">
-                <img src="photo.jpg" alt="Xuelin Li Portrait">
-            </div>
+                <h2>Research Interests:</h2>
+                <ul>
+                    <li>Healthcare Finance</li>
+                    <li>Innovation</li>
+                    <li>Entrepreneurial Finance</li>
+                    <li>Information Economics</li>
+                </ul>
+
+                <h2>First Name Pronunciation:</h2>
+                <ul>
+                    <li>"shu-e-lin". Play sound below.</li>
+                </ul>
+            </main>
+
+            <aside>
+                <img src="photo.jpg" alt="Your portrait" class="hero-img" />
+            </aside>
         </div>
+
+        <footer>
+            © <span id="year"></span> Your Name · Last updated <span id="updated"></span>
+        </footer>
     </div>
 
-    <footer>
-        <p>&copy; 2025 Xuelin Li | Last updated: <span id="updated"></span></p>
-        <script>
-            document.getElementById("updated").textContent = new Date().toISOString().slice(0, 10);
-        </script>
-    </footer>
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+        document.getElementById('updated').textContent = new Date().toISOString().slice(0, 10);
+    </script>
 </body>
 
 </html>
