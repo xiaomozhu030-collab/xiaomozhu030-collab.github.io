@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 
+    
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Research | Xuelin Li (李学林)</title>
+    <title>Xuelin Li (李学林)</title>
     <style>
         :root {
             --accent: #4aa3b5;
@@ -54,24 +55,50 @@
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 1200px; /* Increased width */
             margin: 0 auto;
             padding: 40px;
         }
 
+        .grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr; /* Adjusted columns for wider layout */
+            gap: 36px;
+            align-items: start;
+        }
+
+        @media (max-width: 900px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
         h2 {
-            font-size: 24px;
-            margin-bottom: 20px;
+            font-size: 18px;
+            margin: 24px 0 10px;
             color: var(--muted);
         }
 
+        p {
+            line-height: 1.72;
+        }
+
         ul {
-            list-style-type: none;
-            padding: 0;
+            margin: 10px 0 0 20px;
         }
 
         li {
-            margin-bottom: 15px;
+            margin: 6px 0;
+        }
+
+        .hero-img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 6px 28px rgba(0, 0, 0, 0.06);
+        }
+
+        .contact a {
+            color: var(--accent);
         }
 
         .cv-btn {
@@ -90,6 +117,23 @@
             font-size: 14px;
             text-align: center;
         }
+
+        .language-selector {
+            position: absolute;
+            top: 40px;
+            right: 40px;
+        }
+
+        .language-selector a {
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 18px;
+            color: var(--accent);
+        }
+
+        .language-selector a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 
@@ -98,37 +142,42 @@
         <header>
             <div class="brand"><span>Xuelin</span> Li (李学林)</div>
             <nav>
-                <a href="index.html">Home</a>
-                <a href="research.html">Research</a>
+                <a href="#">Home</a>
+                 <a href="research.html">Research</a> 
                 <a href="discussion&teach.html">Discussion&Teach</a>
             </nav>
+
         </header>
 
-        <main>
-            <h2>Publications</h2>
-            <ul>
-                <li>
-                    <strong>1. Find and Replace: R&D Investment Following the Erosion of Existing Products</strong>
-                    <br> Joshua L. Krieger, Xuelin Li, and Richard T. Thakor
-                    <br> <a href="paper1.pdf" class="cv-btn" target="_blank">[PDF]</a>
-                </li>
-                <li>
-                    <strong>2. Common Ownership and Innovation Efficiency</strong>
-                    <br> Xuelin Li, Tong Liu, and Lucian A. Taylor
-                    <br> <a href="paper2.pdf" class="cv-btn" target="_blank">[PDF]</a>
-                </li>
-                <li>
-                    <strong>3. Merchants of Death: The Effect of Credit Supply Shocks on Hospital Outcomes</strong>
-                    <br> Cyrus Aghamolla, Pinar Karaca-Mandic, Xuelin Li, and Richard T. Thakor
-                    <br> <a href="paper3.pdf" class="cv-btn" target="_blank">[PDF]</a>
-                </li>
-                <li>
-                    <strong>4. Financial Effects of Remote Product Delivery: Evidence from Hospitals</strong>
-                    <br> Kimberly Cornaggia, Xuelin Li, and Zihan Ye
-                    <br> <a href="paper4.pdf" class="cv-btn" target="_blank">[PDF]</a>
-                </li>
-            </ul>
-        </main>
+        <div class="grid">
+            <main>
+                <p><strong>Assistant Professor of Finance, Columbia Business School</strong>. <a class="cv-btn" href="cv.pdf" target="_blank">Curriculum Vitae</a></p>
+                <p class="contact">Contact: xuelin.li[at]columbia.edu · <a href="https://twitter.com/XuelinLester" target="_blank">@XuelinLester</a></p>
+
+                <h2>Biography:</h2>
+                <p>
+                    My research bridges the studies on finance and healthcare, which are two crucial academic fields in the broad economic literature. The connection is through two classical decisions in corporate finance: financing and investment. To conduct this research, I utilize novel datasets on granular operation and innovation information in the healthcare industry and apply both empirical and theoretical methods from finance.
+                </p>
+
+                <h2>Education:</h2>
+                <ul>
+                    <li>Ph.D. in Finance, University of Minnesota (09/2014 – 06/2020)</li>
+                    <li>B.S. in Finance, Peking University (09/2010 – 06/2014)</li>
+                </ul>
+
+                <h2>Research Interests:</h2>
+                <ul>
+                    <li>Healthcare Finance</li>
+                    <li>Innovation</li>
+                    <li>Entrepreneurial Finance</li>
+                    <li>Information Economics</li>
+                </ul>
+            </main>
+
+            <aside>
+                <img src="photo.jpeg" alt="Your portrait" class="hero-img" />
+            </aside>
+        </div>
 
         <footer>
             © <span id="year"></span> Xuelin Li · Last updated <span id="updated"></span>
