@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research | Xuelin Li (李学林)</title>
+    <style>
+        :root {
+            --accent: #4aa3b5;
+            --text: #1b3542;
+            --muted: #5a7a89;
+            --bg: #f9fcfd;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Times New Roman', serif;
+            color: var(--text);
+            background: var(--bg);
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 0 24px;
+            border-bottom: 1px solid #eaf1f4;
+            margin-bottom: 28px;
+        }
+
+        .brand {
+            font-size: 28px;
+            font-weight: 700;
+            letter-spacing: 0.2px;
+        }
+
+        .brand span {
+            color: var(--accent);
+        }
+
+        nav a {
+            margin-left: 22px;
+            text-decoration: none;
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: var(--muted);
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 15px;
+        }
+
+        .cv-btn {
+            display: inline-block;
+            margin-left: 6px;
+            padding: 4px 10px;
+            border-radius: 6px;
+            background: #e8f4f7;
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        footer {
+            margin-top: 40px;
+            color: #7a98a6;
+            font-size: 14px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="brand"><span>Xuelin</span> Li (李学林)</div>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="research.html">Research</a>
+                <a href="discussion&teach.html">Discussion&Teach</a>
+            </nav>
+        </header>
+
+        <main>
+            <h2>Publications</h2>
+            <ul>
+                <li>
+                    <strong>1. Find and Replace: R&D Investment Following the Erosion of Existing Products</strong>
+                    <br> Joshua L. Krieger, Xuelin Li, and Richard T. Thakor
+                    <br> <a href="paper1.pdf" class="cv-btn" target="_blank">[PDF]</a>
+                </li>
+                <li>
+                    <strong>2. Common Ownership and Innovation Efficiency</strong>
+                    <br> Xuelin Li, Tong Liu, and Lucian A. Taylor
+                    <br> <a href="paper2.pdf" class="cv-btn" target="_blank">[PDF]</a>
+                </li>
+                <li>
+                    <strong>3. Merchants of Death: The Effect of Credit Supply Shocks on Hospital Outcomes</strong>
+                    <br> Cyrus Aghamolla, Pinar Karaca-Mandic, Xuelin Li, and Richard T. Thakor
+                    <br> <a href="paper3.pdf" class="cv-btn" target="_blank">[PDF]</a>
+                </li>
+                <li>
+                    <strong>4. Financial Effects of Remote Product Delivery: Evidence from Hospitals</strong>
+                    <br> Kimberly Cornaggia, Xuelin Li, and Zihan Ye
+                    <br> <a href="paper4.pdf" class="cv-btn" target="_blank">[PDF]</a>
+                </li>
+            </ul>
+        </main>
+
+        <footer>
+            © <span id="year"></span> Xuelin Li · Last updated <span id="updated"></span>
+        </footer>
+    </div>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+        document.getElementById('updated').textContent = new Date().toISOString().slice(0, 10);
+    </script>
+</body>
+
+</html>
