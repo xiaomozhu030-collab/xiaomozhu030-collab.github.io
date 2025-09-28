@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teaching | Xuelin Li (李学林)</title>
+    <style>
+        :root {
+            --accent: #4aa3b5;
+            --text: #1b3542;
+            --muted: #5a7a89;
+            --bg: #f9fcfd;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Times New Roman', serif;
+            color: var(--text);
+            background: var(--bg);
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 0 24px;
+            border-bottom: 1px solid #eaf1f4;
+            margin-bottom: 28px;
+        }
+
+        .brand {
+            font-size: 28px;
+            font-weight: 700;
+            letter-spacing: 0.2px;
+        }
+
+        .brand span {
+            color: var(--accent);
+        }
+
+        nav a {
+            margin-left: 22px;
+            text-decoration: none;
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: var(--muted);
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 25px;
+        }
+
+        .cv-btn {
+            display: inline-block;
+            margin-left: 6px;
+            padding: 4px 10px;
+            border-radius: 6px;
+            background: #e8f4f7;
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .section-header {
+            color: var(--accent);
+            font-size: 22px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            margin-top: 40px;
+            color: #7a98a6;
+            font-size: 14px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="brand"><span>Xuelin</span> Li (李学林)</div>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="research.html">Research</a>
+                <a href="discussion&teach.html">Discussion&Teach</a>
+            </nav>
+        </header>
+
+        <main>
+            <h2>Teaching</h2>
+            <div class="section-header">FINCB 8356: Financing Innovation in Healthcare</div>
+            <p>
+                I designed this course for the Healthcare and Pharmaceutical Management Program at Columbia Business School
+                to offer a structured perspective on how innovation in the healthcare sector is financed. The first half focuses
+                on the biopharma industry, addressing unique valuation challenges and the risk-return dynamics that shape investment
+                decisions. We then examine the critical roles of government funding, non-profits, venture capital, and M&A activity
+                in advancing innovation. In the second half, the course turns to U.S. hospitals, analyzing how financial structures and
+                external capital impact care quality and technology adoption. This course is intended for graduate-level students interested
+                in the intersection of finance, innovation, and health policy. Slides with restricted access can be found
+                <a href="https://www.example.com" target="_blank">here</a>.
+            </p>
+        </main>
+
+        <footer>
+            © <span id="year"></span> Xuelin Li · Last updated <span id="updated"></span>
+        </footer>
+    </div>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+        document.getElementById('updated').textContent = new Date().toISOString().slice(0, 10);
+    </script>
+</body>
+
+</html>
