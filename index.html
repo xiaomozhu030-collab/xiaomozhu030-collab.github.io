@@ -1,193 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
-
-    
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Xuelin Li (李学林)</title>
+    <title>My Academic Homepage</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --accent: #4aa3b5;
-            --text: #1b3542;
-            --muted: #5a7a89;
-            --bg: #f9fcfd;
-        }
-
-        * {
-            box-sizing: border-box;
-        }
-
+        /* General Styles */
         body {
+            font-family: 'Roboto', sans-serif;
             margin: 0;
-            font-family: 'Times New Roman', serif;
-            color: var(--text);
-            background: var(--bg);
-        }
-
-        header {
+            padding: 0;
             display: flex;
-            justify-content: space-between;
-            padding: 12px 0 24px;
-            border-bottom: 1px solid #eaf1f4;
-            margin-bottom: 28px;
+            height: 100vh;
+            background-color: #f4f4f9;
+        }
+        
+        /* Left Sidebar */
+        #sidebar {
+            width: 250px;
+            background-color: #222;
+            color: white;
+            padding: 20px;
+            position: fixed;
+            height: 100%;
+            overflow-y: auto;
         }
 
-        .brand {
-            font-size: 28px;
-            font-weight: 700;
-            letter-spacing: 0.2px;
+        #sidebar h2 {
+            margin-top: 0;
         }
 
-        .brand span {
-            color: var(--accent);
+        #sidebar ul {
+            list-style: none;
+            padding-left: 0;
         }
 
-        nav a {
-            margin-left: 22px;
+        #sidebar ul li {
+            margin: 20px 0;
+        }
+
+        #sidebar ul li a {
             text-decoration: none;
-            color: var(--accent);
-            font-weight: 600;
+            color: white;
+            font-size: 18px;
+            display: block;
         }
 
-        nav a:hover {
+        #sidebar ul li a:hover {
+            color: #f1f1f1;
+        }
+
+        /* Content Area */
+        #content {
+            margin-left: 260px;
+            padding: 20px;
+            width: calc(100% - 260px);
+        }
+
+        #content h1 {
+            margin-top: 0;
+            font-size: 32px;
+            color: #333;
+        }
+
+        #content p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #666;
+        }
+
+        /* Styling for links and CV section */
+        .cv-link {
+            font-size: 18px;
+            color: #0088cc;
+        }
+
+        .cv-link:hover {
             text-decoration: underline;
         }
 
-        .container {
-            max-width: 1200px; /* Increased width */
-            margin: 0 auto;
-            padding: 40px;
+        /* Styling for section headings */
+        h3 {
+            color: #444;
         }
 
-        .grid {
-            display: grid;
-            grid-template-columns: 1.5fr 1fr; /* Adjusted columns for wider layout */
-            gap: 36px;
-            align-items: start;
-        }
-
-        @media (max-width: 900px) {
-            .grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        h2 {
-            font-size: 18px;
-            margin: 24px 0 10px;
-            color: var(--muted);
-        }
-
-        p {
-            line-height: 1.72;
-        }
-
-        ul {
-            margin: 10px 0 0 20px;
-        }
-
-        li {
-            margin: 6px 0;
-        }
-
-        .hero-img {
-            width: 100%;
-            border-radius: 10px;
-            box-shadow: 0 6px 28px rgba(0, 0, 0, 0.06);
-        }
-
-        .contact a {
-            color: var(--accent);
-        }
-
-        .cv-btn {
-            display: inline-block;
-            margin-left: 6px;
-            padding: 4px 10px;
-            border-radius: 6px;
-            background: #e8f4f7;
-            color: var(--accent);
-            text-decoration: none;
-        }
-
-        footer {
-            margin-top: 40px;
-            color: #7a98a6;
-            font-size: 14px;
-            text-align: center;
-        }
-
-        .language-selector {
-            position: absolute;
-            top: 40px;
-            right: 40px;
-        }
-
-        .language-selector a {
-            text-decoration: none;
-            margin: 0 10px;
-            font-size: 18px;
-            color: var(--accent);
-        }
-
-        .language-selector a:hover {
-            text-decoration: underline;
+        /* Optional styling for the photo */
+        .profile-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 20px;
         }
     </style>
 </head>
-
 <body>
-    <div class="container">
-        <header>
-            <div class="brand"><span>Xuelin</span> Li (李学林)</div>
-            <nav>
-                <a href="#">Home</a>
-                 <a href="research.html">Research</a> 
-                <a href="teach.html">Teach</a>
-            </nav>
 
-        </header>
+<!-- Sidebar -->
+<div id="sidebar">
+    <h2>Xintong Zhan</h2>
+    <ul>
+        <li><a href="#bio">Bio</a></li>
+        <li><a href="#employment">Employment</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#cv">CV</a></li>
+    </ul>
+</div>
 
-        <div class="grid">
-            <main>
-                <p><strong>Assistant Professor of Finance, Columbia Business School</strong>. <a class="cv-btn" href="cv.pdf" target="_blank">Curriculum Vitae</a></p>
-                <p class="contact">Contact: xuelin.li[at]columbia.edu · <a href="https://twitter.com/XuelinLester" target="_blank">@XuelinLester</a></p>
+<!-- Main Content -->
+<div id="content">
+    <section id="bio">
+        <h1>Bio</h1>
+        <img class="profile-photo" src="profile.jpg" alt="Profile Photo">
+        <p>Assistant Professor at [Your University]. Research interests include digital economy, platform competition, and AI-driven policies.</p>
+    </section>
 
-                <h2>Biography:</h2>
-                <p>
-                    My research bridges the studies on finance and healthcare, which are two crucial academic fields in the broad economic literature. The connection is through two classical decisions in corporate finance: financing and investment. To conduct this research, I utilize novel datasets on granular operation and innovation information in the healthcare industry and apply both empirical and theoretical methods from finance.
-                </p>
+    <section id="employment">
+        <h3>Employment</h3>
+        <ul>
+            <li>Assistant Professor, [Your Department], [Your University], 2022-Present</li>
+            <li>Visiting Researcher, [Organization Name], 2020-2022</li>
+        </ul>
+    </section>
 
-                <h2>Education:</h2>
-                <ul>
-                    <li>Ph.D. in Finance, University of Minnesota (09/2014 – 06/2020)</li>
-                    <li>B.S. in Finance, Peking University (09/2010 – 06/2014)</li>
-                </ul>
+    <section id="education">
+        <h3>Education</h3>
+        <ul>
+            <li>Ph.D. in [Your Field], [University Name], 2016-2020</li>
+            <li>B.A. in [Your Field], [University Name], 2012-2016</li>
+        </ul>
+    </section>
 
-                <h2>Research Interests:</h2>
-                <ul>
-                    <li>Healthcare Finance</li>
-                    <li>Innovation</li>
-                    <li>Entrepreneurial Finance</li>
-                    <li>Information Economics</li>
-                </ul>
-            </main>
+    <section id="research">
+        <h3>Research</h3>
+        <p>My research explores how digital platforms shape economic dynamics and the role of AI in competitive markets. I am particularly focused on the intersection of platform strategy, consumer behavior, and public policy.</p>
+    </section>
 
-            <aside>
-                <img src="photo.jpeg" alt="Your portrait" class="hero-img" />
-            </aside>
-        </div>
+    <section id="contact">
+        <h3>Contact</h3>
+        <p>Email: <a href="mailto:xintongzhan@fudan.edu.cn">xintongzhan@fudan.edu.cn</a></p>
+    </section>
 
-        <footer>
-            © <span id="year"></span> Xuelin Li · Last updated <span id="updated"></span>
-        </footer>
-    </div>
+    <section id="cv">
+        <h3>CV</h3>
+        <p>For detailed information on my professional experience, publications, and academic contributions, you can download my <a class="cv-link" href="cv.pdf" target="_blank">CV</a>.</p>
+    </section>
+</div>
 
-    <script>
-        document.getElementById('year').textContent = new Date().getFullYear();
-        document.getElementById('updated').textContent = new Date().toISOString().slice(0, 10);
-    </script>
 </body>
-
 </html>
