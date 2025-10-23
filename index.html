@@ -4,142 +4,79 @@
   <meta charset="UTF-8">
   <title>我的学术主页</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    body {
-      margin: 0;
-      font-family: "Helvetica Neue", Arial, sans-serif;
-      color: #222;
-      background-color: #ffffff;
-      display: flex;
-      line-height: 1.6;
-    }
-    /* 左侧导航 */
-    nav {
-      width: 220px;
-      background-color: #f3f4f6; /* 更浅的灰色 */
-      border-right: 1px solid #e2e2e2;
-      padding: 20px 15px;
-      box-sizing: border-box;
-      position: fixed;
-      top: 0;
-      bottom: 0;
-      overflow-y: auto;
-    }
-    nav h2 {
-      font-size: 1.25em;
-      margin: 0 0 10px 0;
-      color: #111;
-    }
-    nav ul {
-      list-style: none;
-      padding-left: 0;
-      margin: 0;
-    }
-    nav ul li {
-      margin: 8px 0;
-    }
-    nav ul li a {
-      color: #0066c0;            /* 蓝色链接 */
-      text-decoration: none;
-      font-size: 0.95em;
-    }
-    nav ul li a:hover {
-      text-decoration: underline;
-    }
-
-    /* 右侧内容区域 */
-    main {
-      margin-left: 240px;
-      padding: 30px 40px;
-      max-width: 1000px;
-    }
-    /* 个人信息卡片 */
-    .profile {
-      display: flex;
-      align-items: flex-start;
-      margin-bottom: 30px;
-    }
-    .profile img {
-      width: 180px;
-      height: auto;
-      border-radius: 4px;
-      margin-right: 20px;
-    }
-    .profile-info h1 {
-      margin: 0 0 10px 0;
-      font-size: 2em;
-      font-weight: bold;
-    }
-    .profile-info p {
-      margin: 3px 0;
-      font-size: 0.95em;
-    }
-    .profile-info a {
-      color: #0066c0;
-      text-decoration: none;
-    }
-    .profile-info a:hover {
-      text-decoration: underline;
-    }
-
-    /* 每个 section 的标题样式 */
-    section {
-      margin-bottom: 40px;
-    }
-    section h1 {
-      font-size: 1.6em;
-      margin-top: 40px;
-      margin-bottom: 10px;
-      padding-bottom: 8px;
-      border-bottom: 2px solid #e0e0e0;
-    }
-    section h2 {
-      font-size: 1.2em;
-      margin-top: 20px;
-      margin-bottom: 6px;
-    }
-    ul, ol {
-      margin: 0 0 10px 20px;
-    }
-  </style>
+  <!-- 引入外部样式 -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <!-- 左侧目录 -->
   <nav>
     <h2>目录</h2>
-    <ul>
-      <li><a href="#home">主页 / Home</a></li>
-      <li><a href="#employment">Employment</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#publications">Selected Refereed Publications</a></li>
-      <li><a href="#working-papers">Selected Working Papers</a></li>
-      <li><a href="#grants">Selected Research Grants</a></li>
-      <li><a href="#honors">Selected Honors & Awards</a></li>
-      <li><a href="#teaching">Teaching Experience</a></li>
-      <li><a href="#skills">Professional Skills</a></li>
-      <li><a href="#presentations">Presentations</a></li>
-      <li><a href="#discussions">Discussions</a></li>
-      <li><a href="#bio-cn">中文简介</a></li>
+    <ul class="top-level">
+      <!-- 首页 -->
+      <li>主页 / Home
+        <ul>
+          <li><a href="#employment">Employment</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#publications">Selected Refereed Publications</a></li>
+          <li><a href="#working-papers">Selected Working Papers</a></li>
+          <li><a href="#grants">Selected Research Grants</a></li>
+          <li><a href="#honors">Selected Honors & Awards</a></li>
+        </ul>
+      </li>
+      <!-- Teaching & Skills -->
+      <li>Teaching & Skills
+        <ul>
+          <li><a href="#teaching">Teaching Experience</a></li>
+          <li><a href="#skills">Professional Skills / Qualifications</a></li>
+        </ul>
+      </li>
+      <!-- Presentations -->
+      <li>Presentations
+        <ul>
+          <li><a href="#presentations-academics">Presentations to Academics</a></li>
+          <li><a href="#presentations-industry">Presentations to Industry Professionals</a></li>
+          <li><a href="#presentations-coauthors">Presentations by Co‑authors</a></li>
+        </ul>
+      </li>
+      <!-- Discussions -->
+      <li>Discussions
+        <ul>
+          <li><a href="#discussions">Discussions</a></li>
+        </ul>
+      </li>
+      <!-- 中文简介 -->
+      <li>中文简介
+        <ul>
+          <li><a href="#bio-cn">个人简介（中文）</a></li>
+        </ul>
+      </li>
     </ul>
   </nav>
 
   <!-- 右侧内容 -->
   <main>
+    <!-- 个人信息 -->
     <section id="home">
       <div class="profile">
-        <img src="photo.jpeg" alt="Profile Photo">
+        <!-- 替换图片文件名 -->
+        <img src="your_photo.jpg" alt="Profile Photo">
         <div class="profile-info">
           <h1>你的名字 (Your Name)</h1>
           <p><strong>Title / 职称：</strong> 例如 “金融学教授”</p>
           <p><strong>Department / 学院：</strong> 复旦大学管理学院金融与财务学系</p>
           <p><strong>Email：</strong><a href="mailto:you@example.com">you@example.com</a></p>
-          <p><strong>Links：</strong><a href="#">CV</a> | <a href="#">ORCID</a> | <a href="#">Google Scholar</a></p>
+          <p><strong>Links：</strong>
+            <a href="#">CV</a> |
+            <a href="#">ORCID</a> |
+            <a href="#">Google Scholar</a>
+          </p>
         </div>
       </div>
       <p>在这里写几句简介，说明你的研究领域和兴趣。</p>
     </section>
 
+    <!-- 首页各模块 -->
     <section id="employment">
       <h1>Employment</h1>
       <ul>
@@ -157,87 +94,117 @@
       </ul>
     </section>
 
-    <!-- 其余 section 与之前示例相同，可以照抄并自定义内容 -->
-    <!-- Selected Refereed Publications -->
     <section id="publications">
       <h1>Selected Refereed Publications</h1>
       <ol>
-        <li><em>Product Market Threats and Stock Crash Risk</em>, <strong>Management Science</strong> 65(9), 4011‑4031 (2019).</li>
-        <li><em>Peer Effects of Corporate Social Responsibility</em>, <strong>Management Science</strong> 65(12), 5487‑5503 (2019).</li>
-        <!-- 更多条目… -->
+        <li><em>Product Market Threats and Stock Crash Risk</em>, <strong>Management Science</strong> 65(9), 4011‑4031 (2019).</li>
+        <li><em>Peer Effects of Corporate Social Responsibility</em>, <strong>Management Science</strong> 65(12), 5487‑5503 (2019).</li>
+        <li><em>Does Change in the Information Environment Affect Financing Choices?</em>, <strong>Management Science</strong> 65(12), 5676‑5696 (2019).</li>
+        <!-- 如有需要补充其他论文 -->
       </ol>
     </section>
 
-    <!-- Selected Working Papers -->
     <section id="working-papers">
       <h1>Selected Working Papers (SSRN)</h1>
       <ul>
-        <li><em>Forecasting Option Returns with News</em> — with Jie Cao, Bing Han, Gang Li, Ruijing Yang.</li>
-        <!-- 更多条目… -->
+        <li><em>Forecasting Option Returns with News</em> — 与合作者共同撰写。</li>
+        <li><em>Betting Against the Crowd: Option Trading and Market Risk Premium</em> — 与合作者共同撰写。</li>
+        <!-- 补充其他工作论文 -->
       </ul>
     </section>
 
-    <!-- Selected Research Grants -->
     <section id="grants">
       <h1>Selected Research Grants</h1>
       <ul>
         <li>National Natural Science Foundation of China (NSFC) — General Program (PI), 2022.</li>
-        <!-- 更多条目… -->
+        <li>Hong Kong Research Grants Council — General Research Fund (PI), 2021/22, HK$ 825 993.</li>
+        <!-- 补充其他研究资助 -->
       </ul>
     </section>
 
-    <!-- Selected Honors & Awards -->
     <section id="honors">
-      <h1>Selected Honors & Awards</h1>
+      <h1>Selected Honors & Awards</h1>
       <ul>
-        <li>CFA Institute Prize (Best Paper), Australian Finance & Banking Conference, 2024.</li>
-        <!-- 更多条目… -->
+        <li>CFA Institute Prize (Best Paper), Australian Finance & Banking Conference, 2024.</li>
+        <!-- 补充其他荣誉 -->
       </ul>
     </section>
 
-    <!-- Teaching Experience -->
+    <!-- Teaching & Skills 页面 -->
     <section id="teaching">
       <h1>Teaching Experience</h1>
       <h2>School of Management, Fudan University</h2>
       <ul>
         <li>Real Estate Finance (Master & Undergraduate)</li>
-        <!-- 更多课程… -->
+        <li>Sustainable Finance (Master)</li>
+        <li>Financial Markets and Institutions (MPhil‑PhD)</li>
+      </ul>
+      <h2>CUHK Business School, Chinese University of Hong Kong</h2>
+      <ul>
+        <li>Financial Management (Undergraduate)</li>
+        <li>Real Estate Finance (Master)</li>
+      </ul>
+      <h2>Erasmus School of Economics, Erasmus University Rotterdam</h2>
+      <ul>
+        <li>Seminar on Corporate Governance (Master)</li>
+        <li>Seminar on Corporate Finance (MPhil‑PhD)</li>
+        <li>Behavioral Finance (Undergraduate)</li>
       </ul>
     </section>
 
-    <!-- Professional Skills -->
     <section id="skills">
-      <h1>Professional Skills / Qualifications</h1>
+      <h1>Professional Skills / Qualifications</h1>
       <ul>
-        <li>Chartered Financial Analyst (CFA) Charterholder since 2016.</li>
-        <li>Chartered Alternative Investment Analyst (CAIA) Charterholder since 2018.</li>
+        <li>Chartered Financial Analyst (CFA) Charterholder since 2016</li>
+        <li>Chartered Alternative Investment Analyst (CAIA) Charterholder since 2018</li>
+        <!-- 补充其他资格 -->
       </ul>
     </section>
 
-    <!-- Presentations -->
-    <section id="presentations">
-      <h1>Presentations</h1>
-      <h2>Presentations to Academics</h2>
+    <!-- Presentations 页面 -->
+    <section id="presentations-academics">
+      <h1>Presentations to Academics</h1>
       <ul>
-        <li>American Finance Association Annual Meeting 2025 — San Francisco, USA.</li>
-        <!-- 更多活动… -->
+        <li>American Finance Association Annual Meeting 2025 — San Francisco, USA</li>
+        <li>Seoul National University 2025 — Seoul, South Korea</li>
+        <li>Finance Down Under Conference 2025 — Melbourne, Australia</li>
+        <!-- 补充其他演讲 -->
       </ul>
     </section>
 
-    <!-- Discussions -->
+    <section id="presentations-industry">
+      <h1>Presentations to Industry Professionals</h1>
+      <ul>
+        <li>示例：演讲题目 — 举办地、年份</li>
+        <!-- 补充相关条目 -->
+      </ul>
+    </section>
+
+    <section id="presentations-coauthors">
+      <h1>Presentations by Co‑authors</h1>
+      <ul>
+        <li>示例：合作者代表团队演讲题目 — 举办地、年份</li>
+        <!-- 补充相关条目 -->
+      </ul>
+    </section>
+
+    <!-- Discussions 页面 -->
     <section id="discussions">
       <h1>Discussions</h1>
       <ul>
-        <li>Discussant for “Network Factors for Idiosyncratic Volatility Spillover”, CICF 2025, China.</li>
-        <!-- 更多讨论… -->
+        <li>Discussant for “Network Factors for Idiosyncratic Volatility Spillover”, CICF 2025, China</li>
+        <li>Discussant for “Environmental Partisanship in the Crowdfunding of Technology”, CICF 2025, China</li>
+        <!-- 补充其他讨论记录 -->
       </ul>
     </section>
 
     <!-- 中文简介 -->
     <section id="bio-cn">
-      <h1>中文简介</h1>
-      <p>用中文撰写个人简介、教育背景与研究经历。可以参考原网站的中文简介部分进行编写。</p>
+      <h1>个人简介（中文）</h1>
+      <p>这里用中文描述你的研究领域、教育背景和工作经历。例如：</p>
+      <p>某某教授现任某大学管理学院金融学讲席教授，博士生导师，亚洲经济金融研究局研究员。她/他亦是特许金融分析师(CFA)和特许另类投资分析师(CAIA)持证人……</p>
     </section>
+
   </main>
 </body>
 </html>
