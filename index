@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Name | Homepage</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Sans&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: "Inter", "Noto Sans", Arial, sans-serif;
+      background-color: #fff;
+      color: #1f1f1f;
+    }
+
+    .container {
+      display: flex;
+      min-height: 100vh;
+    }
+
+    /* 左侧导航栏 */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 250px;
+      height: 100%;
+      background-color: #f5f7fb;
+      border-right: 1px solid #ddd;
+      padding: 25px 20px;
+      overflow-y: auto;
+    }
+
+    nav h2 {
+      font-size: 1.1rem;
+      color: #004B97;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav li {
+      margin: 10px 0;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #004B97;
+      font-weight: 500;
+    }
+
+    nav a:hover, nav a.active {
+      color: #0056b3;
+      text-decoration: underline;
+    }
+
+    /* 右侧主要内容 */
+    main {
+      margin-left: 270px;
+      padding: 40px 70px;
+      max-width: 900px;
+      line-height: 1.6;
+    }
+
+    section {
+      margin-bottom: 80px;
+    }
+
+    h1, h2 {
+      color: #004B97;
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      margin-bottom: 0.3rem;
+    }
+
+    h2 {
+      border-bottom: 2px solid #004B97;
+      display: inline-block;
+      padding-bottom: 4px;
+      margin-top: 1.5rem;
+    }
+
+    a {
+      color: #0056b3;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    li {
+      margin: 6px 0;
+    }
+
+    /* 响应式 */
+    @media (max-width: 768px) {
+      nav {
+        position: relative;
+        width: 100%;
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid #ddd;
+      }
+      main {
+        margin: 0;
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <nav>
+      <h2>Your Name</h2>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#teaching">Teaching & Skills</a></li>
+        <li><a href="#presentations">Presentations</a></li>
+        <li><a href="#discussions">Discussions</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#grants">Research Grants</a></li>
+        <li><a href="#awards">Honors & Awards</a></li>
+        <li><a href="#media">Media Features</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <!-- Home -->
+      <section id="home">
+        <h1>Your Name, Title</h1>
+        <p><b>Affiliation:</b> Department of Finance, School of Management, Your University</p>
+        <p><b>Email:</b> <a href="mailto:yourname@youruniversity.edu">yourname@youruniversity.edu</a></p>
+        <p>
+          [<a href="#">CV</a>] | 
+          <a href="#">LinkedIn</a> | 
+          <a href="#">ORCiD</a> | 
+          <a href="#">Google Scholar</a>
+        </p>
+        <p>
+          <i>Research interests:</i> Asset pricing, ESG investing, financial markets, data-driven policy.
+        </p>
+      </section>
+
+      <!-- Teaching -->
+      <section id="teaching">
+        <h2>Teaching & Skills</h2>
+        <ul>
+          <li>Course 1 — Financial Management (Undergraduate)</li>
+          <li>Course 2 — Corporate Finance (MBA)</li>
+          <li>Course 3 — Research Methods in Finance (PhD)</li>
+        </ul>
+        <p><b>Skills:</b> Python, Stata, MATLAB, LaTeX, R, SQL</p>
+      </section>
+
+      <!-- Presentations -->
+      <section id="presentations">
+        <h2>Presentations</h2>
+        <p><i>Academic Conferences:</i></p>
+        <ul>
+          <li>AFA (2024), WFA (2023), EFA (2022), ABFER (2021)</li>
+          <li>Invited Seminars: HKUST, CUHK, Fudan, NUS, Erasmus University</li>
+        </ul>
+      </section>
+
+      <!-- Discussions -->
+      <section id="discussions">
+        <h2>Discussions</h2>
+        <ul>
+          <li>Discussant, “ESG Preference and Institutional Trading,” AFA 2024</li>
+          <li>Discussant, “Option Implied Information and Bond Market Reaction,” CICF 2023</li>
+        </ul>
+      </section>
+
+      <!-- Publications -->
+      <section id="publications">
+        <h2>Selected Publications</h2>
+        <ul>
+          <li><b>Paper Title 1</b> — Journal of Financial Economics, 2024</li>
+          <li><b>Paper Title 2</b> — Review of Financial Studies, 2023</li>
+          <li><b>Paper Title 3</b> — Management Science, 2022</li>
+        </ul>
+      </section>
+
+      <!-- Grants -->
+      <section id="grants">
+        <h2>Research Grants</h2>
+        <ul>
+          <li>National Natural Science Foundation of China (NSFC), 2024–2026</li>
+          <li>Hong Kong RGC General Research Fund, 2020–2022</li>
+          <li>Geneva Institute for Wealth Management, 2020</li>
+        </ul>
+      </section>
+
+      <!-- Awards -->
+      <section id="awards">
+        <h2>Honors & Awards</h2>
+        <ul>
+          <li>CFA Institute Prize (Best Paper in ESG and Sustainability), 2024</li>
+          <li>Best Paper Award, Hong Kong Fintech and Big Data Conference, 2023</li>
+          <li>Excellent Young Scholar, National Science Foundation of China, 2022</li>
+        </ul>
+      </section>
+
+      <!-- Media -->
+      <section id="media">
+        <h2>Research Featured in News</h2>
+        <ul>
+          <li><a href="#">"ESG Preferences and Market Efficiency"</a>, Alpha Architect, 2023</li>
+          <li><a href="#">"Mutual Funds and Climate Risk"</a>, China Business Knowledge @ CUHK, 2022</li>
+        </ul>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact">
+        <h2>Contact</h2>
+        <p>Department of Finance, School of Management<br>
+        Fudan University, Shanghai, China<br>
+        Email: yourname@fudan.edu.cn</p>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    // 平滑滚动 + 当前导航高亮
+    document.querySelectorAll('nav a').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    window.addEventListener('scroll', () => {
+      const sections = document.querySelectorAll('section');
+      let current = '';
+      sections.forEach(section => {
+        if (pageYOffset >= section.offsetTop - 100) {
+          current = section.getAttribute('id');
+        }
+      });
+      document.querySelectorAll('nav a').forEach(a => {
+        a.classList.remove('active');
+        if (a.getAttribute('href') === `#${current}`) a.classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>
