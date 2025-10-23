@@ -1,79 +1,248 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Xiaomo Zhu | Homepage</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Sans&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
-  <script src="script.js" defer></script>
+  <meta charset="UTF-8">
+  <title>我的学术主页</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    /* 布局样式：左侧导航 + 右侧内容 */
+    body {
+      margin: 0;
+      font-family: "Arial", sans-serif;
+      display: flex;
+      min-height: 100vh;
+    }
+    /* 左侧导航栏 */
+    nav {
+      width: 220px;
+      background-color: #f5f5f5;
+      padding: 20px;
+      box-sizing: border-box;
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      overflow-y: auto;
+    }
+    nav h2 {
+      margin-top: 0;
+      font-size: 1.2em;
+    }
+    nav ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    nav ul li {
+      margin: 8px 0;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: #0645AD;
+    }
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+    /* 右侧内容区域 */
+    main {
+      margin-left: 240px; /* 留出导航栏空间 */
+      padding: 20px;
+      flex: 1;
+    }
+    section {
+      margin-bottom: 40px;
+    }
+    section h1 {
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 8px;
+      margin-top: 0;
+    }
+    /* 头像样式 */
+    .profile {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 30px;
+    }
+    .profile img {
+      width: 200px;
+      height: auto;
+      margin-right: 20px;
+      border-radius: 4px;
+    }
+    .profile-info h1 {
+      margin-top: 0;
+    }
+  </style>
 </head>
-
 <body>
-  <div class="container">
-    <!-- 左侧导航栏 -->
-    <nav class="sidebar">
+
+  <!-- 左侧目录 -->
+  <nav>
+    <h2>目录</h2>
+    <ul>
+      <li><a href="#home">主页 / Home</a></li>
+      <li><a href="#employment">Employment</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#publications">Selected Refereed Publications</a></li>
+      <li><a href="#working-papers">Selected Working Papers</a></li>
+      <li><a href="#grants">Selected Research Grants</a></li>
+      <li><a href="#honors">Selected Honors & Awards</a></li>
+      <li><a href="#teaching">Teaching Experience</a></li>
+      <li><a href="#skills">Professional Skills</a></li>
+      <li><a href="#presentations">Presentations</a></li>
+      <li><a href="#discussions">Discussions</a></li>
+      <li><a href="#bio-cn">中文简介</a></li>
+    </ul>
+  </nav>
+
+  <!-- 右侧内容 -->
+  <main>
+    <!-- 主页 Section -->
+    <section id="home">
       <div class="profile">
-        <img src="your-photo.jpg" alt="Xiaomo Zhu" class="profile-img">
-        <h2>Xiaomo Zhu</h2>
-        <p class="subtitle">Ph.D. Student, UCAS</p>
+        <!-- 将 your_photo.jpg 替换为你上传到仓库中的头像文件名 -->
+        <img src="your_photo.jpg" alt="Profile Photo">
+        <div class="profile-info">
+          <h1>你的名字 (Your Name)</h1>
+          <p><strong>Title / 职称：</strong>例如，“金融学教授”</p>
+          <p><strong>Department / 学院：</strong>复旦大学管理学院金融与财务学系</p>
+          <p><strong>Email：</strong><a href="mailto:you@example.com">you@example.com</a></p>
+          <p><strong>Links：</strong><a href="#">CV</a> | <a href="#">ORCID</a> | <a href="#">Google Scholar</a></p>
+        </div>
       </div>
+      <p>在这里写几句简介，说明你的研究领域和兴趣。</p>
+    </section>
+
+    <!-- Employment -->
+    <section id="employment">
+      <h1>Employment</h1>
       <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#research">Research</a></li>
-        <li><a href="#teaching">Teaching</a></li>
-        <li><a href="#publications">Publications</a></li>
-        <li><a href="#awards">Awards</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li>Li‑Dasan Chair Professor of Finance, School of Management, Fudan University (2022–present)</li>
+        <li>Assistant Professor of Finance and Real Estate, CUHK Business School, Chinese University of Hong Kong (2018–2021)</li>
+        <li>Assistant Professor of Finance, Erasmus School of Economics, Erasmus University Rotterdam (2016–2018)</li>
+        <!-- 按需添加或修改 -->
       </ul>
-    </nav>
+    </section>
 
-    <!-- 右侧主内容 -->
-    <main class="content">
-      <section id="about">
-        <h1>Xiaomo Zhu</h1>
-        <p>Ph.D. Student in Theoretical Computer Science<br>
-        School of Economics and Management, University of Chinese Academy of Sciences</p>
-        <p>Email: <a href="mailto:zhuxiaomo23@mails.ucas.ac.cn">zhuxiaomo23@mails.ucas.ac.cn</a></p>
-      </section>
+    <!-- Education -->
+    <section id="education">
+      <h1>Education</h1>
+      <ul>
+        <li>Ph.D. in Finance, The Chinese University of Hong Kong (2012–2016) — Supervisor: Hua Zhang</li>
+        <li>B.A. in Finance, Guanghua School of Management, Peking University (2008–2012)</li>
+        <!-- 按需添加或修改 -->
+      </ul>
+    </section>
 
-      <section id="research">
-        <h2>Research Interests</h2>
-        <ul>
-          <li>Clustering and Approximation Algorithms</li>
-          <li>Digital Economy and Platform Competition</li>
-          <li>Antitrust and Regulation of AI Platforms</li>
-        </ul>
-      </section>
+    <!-- Selected Refereed Publications -->
+    <section id="publications">
+      <h1>Selected Refereed Publications</h1>
+      <ol>
+        <li><em>Product Market Threats and Stock Crash Risk</em>, <strong>Management Science</strong> 65(9), 4011‑4031 (2019).</li>
+        <li><em>Peer Effects of Corporate Social Responsibility</em>, <strong>Management Science</strong> 65(12), 5487‑5503 (2019).</li>
+        <li><em>Does Change in the Information Environment Affect Financing Choices?</em>, <strong>Management Science</strong> 65(12), 5676‑5696 (2019).</li>
+        <!-- 列出其他论文 -->
+      </ol>
+    </section>
 
-      <section id="teaching">
-        <h2>Teaching &amp; Skills</h2>
-        <p>Teaching Assistant — Computational Economics (2024)</p>
-        <p>Skills: Python, Stata, LaTeX, HTML/CSS</p>
-      </section>
+    <!-- Selected Working Papers -->
+    <section id="working-papers">
+      <h1>Selected Working Papers (SSRN)</h1>
+      <ul>
+        <li><em>Forecasting Option Returns with News</em> — with Jie Cao, Bing Han, Gang Li, Ruijing Yang (2022–2025).</li>
+        <li><em>Betting Against the Crowd: Option Trading and Market Risk Premium</em> — with Jie Cao, Gang Li, Guofu Zhou.</li>
+        <li><em>Foreign Institutional Ownership and Corporate Carbon Emissions</em> — with Jie Cao, Weiming Zhang, Yaojia Zhang.</li>
+        <!-- 更多工作论文 -->
+      </ul>
+    </section>
 
-      <section id="publications">
-        <h2>Selected Publications</h2>
-        <ul>
-          <li><b>The Power of Uniform Sampling for Clustering</b>, JMLR (Under Review), 2025.</li>
-          <li><b>Blessing or Curse? Data Brokers and Publisher Competition</b>, Working Paper.</li>
-        </ul>
-      </section>
+    <!-- Selected Research Grants -->
+    <section id="grants">
+      <h1>Selected Research Grants</h1>
+      <ul>
+        <li>National Natural Science Foundation of China (NSFC) — General Program (PI), 2022.</li>
+        <li>Hong Kong Research Grants Council — General Research Fund (PI), 2021/22, HK$ 825,993.</li>
+        <li>Hong Kong Research Grants Council — Early Career Scheme (PI), 2019/20, HK$ 450,000.</li>
+        <!-- 更多项目 -->
+      </ul>
+    </section>
 
-      <section id="awards">
-        <h2>Awards &amp; Honors</h2>
-        <ul>
-          <li>Outstanding Graduate Scholarship, UCAS (2024)</li>
-          <li>National Scholarship for Graduate Students (2023)</li>
-        </ul>
-      </section>
+    <!-- Selected Honors & Awards -->
+    <section id="honors">
+      <h1>Selected Honors & Awards</h1>
+      <ul>
+        <li>CFA Institute Prize (Best Paper), Australian Finance & Banking Conference, 2024.</li>
+        <!-- 可补充其他荣誉 -->
+      </ul>
+    </section>
 
-      <section id="contact">
-        <h2>Contact</h2>
-        <p>📧 Email: zhuxiaomo23@mails.ucas.ac.cn</p>
-        <p>🌐 GitHub: <a href="https://github.com/your-username">github.com/your-username</a></p>
-      </section>
-    </main>
-  </div>
+    <!-- Teaching Experience -->
+    <section id="teaching">
+      <h1>Teaching Experience</h1>
+      <h2>School of Management, Fudan University</h2>
+      <ul>
+        <li>Real Estate Finance (Master & Undergraduate)</li>
+        <li>Sustainable Finance (Master)</li>
+        <li>Financial Markets and Institutions (MPhil‑PhD)</li>
+      </ul>
+      <h2>CUHK Business School, Chinese University of Hong Kong</h2>
+      <ul>
+        <li>Financial Management (Undergraduate)</li>
+        <li>Real Estate Finance (Master)</li>
+      </ul>
+      <h2>Erasmus School of Economics, Erasmus University Rotterdam</h2>
+      <ul>
+        <li>Seminar on Corporate Governance (Master)</li>
+        <li>Seminar on Corporate Finance (MPhil‑PhD)</li>
+        <li>Behavioral Finance (Undergraduate)</li>
+      </ul>
+    </section>
+
+    <!-- Professional Skills -->
+    <section id="skills">
+      <h1>Professional Skills / Qualifications</h1>
+      <ul>
+        <li>Chartered Financial Analyst (CFA) Charterholder since 2016.</li>
+        <li>Chartered Alternative Investment Analyst (CAIA) Charterholder since 2018.</li>
+        <!-- 添加其他技能或资格 -->
+      </ul>
+    </section>
+
+    <!-- Presentations -->
+    <section id="presentations">
+      <h1>Presentations</h1>
+      <h2>Presentations to Academics</h2>
+      <ul>
+        <li>American Finance Association Annual Meeting 2025 — San Francisco, USA.</li>
+        <li>Seoul National University 2025 — Seoul, South Korea.</li>
+        <li>Finance Down Under Conference 2025 — Melbourne, Australia.</li>
+        <!-- 继续列出其他学术演讲 -->
+      </ul>
+      <h2>Presentations to Industry Professionals</h2>
+      <ul>
+        <li>示例：某金融机构培训演讲，日期地点。</li>
+      </ul>
+      <h2>Presentations by Co-authors</h2>
+      <ul>
+        <li>合作者代表团队的演讲可以列在此处。</li>
+      </ul>
+    </section>
+
+    <!-- Discussions -->
+    <section id="discussions">
+      <h1>Discussions</h1>
+      <ul>
+        <li>Discussant for “Network Factors for Idiosyncratic Volatility Spillover”, CICF 2025, China.</li>
+        <li>Discussant for “Environmental Partisanship in the Crowdfunding of Technology”, CICF 2025, China.</li>
+        <li>Discussant for “Factor Investing with Delays”, FIRS 2025, South Korea.</li>
+        <!-- 按需添加其他讨论活动 -->
+      </ul>
+    </section>
+
+    <!-- 中文简介 -->
+    <section id="bio-cn">
+      <h1>中文简介</h1>
+      <p>用中文写一段个人简介、教育背景和研究经历。例如：</p>
+      <p>战昕彤教授现任复旦大学管理学院李达三金融学讲席教授，博士生导师，亚洲经济金融研究局 (ABFER) 研究员，香港中文大学刘佐德全球经济及金融研究所名誉高级研究员。她是特许金融分析师(CFA)和特许另类投资分析师(CAIA)持证人……</p>
+    </section>
+  </main>
 </body>
 </html>
