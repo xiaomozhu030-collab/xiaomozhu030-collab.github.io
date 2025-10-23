@@ -1,57 +1,140 @@
-/* 调整导航栏宽度和背景色 */
+/* 页面整体字体与颜色 */
+body {
+  margin: 0;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  color: #222;
+  background-color: #ffffff;
+  display: flex;
+  line-height: 1.6;
+}
+
+/* 左侧导航样式 */
 nav {
-  width: 180px;
+  width: 200px;
   background-color: #f5f5f5;
-  border-right: 1px solid #ddd;
+  border-right: 1px solid #e0e0e0;
   padding: 20px 12px;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  overflow-y: auto;
 }
 
-/* 顶级标题更像Google Sites的样式 */
+nav h2 {
+  font-size: 1.25em;
+  margin: 0 0 10px 0;
+  color: #111;
+}
+
+/* 去除导航列表的圆点 */
+nav ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
 nav ul.top-level > li {
-  margin-top: 20px;            /* 增加页面之间的间距 */
-  font-size: 1em;
+  margin-top: 16px;
   font-weight: 600;
-  border-top: 1px solid #e0e0e0;
-  padding-top: 10px;
 }
 
-/* 顶部的第一个元素去掉边框 */
-nav ul.top-level > li:first-child {
-  border-top: none;
-  padding-top: 0;
-  margin-top: 0;
+/* 子列表缩进 */
+nav ul.top-level > li > ul {
+  margin-top: 4px;
+  margin-left: 16px;
 }
 
-/* 子链接字体更小，颜色更柔和 */
-nav ul.top-level > li > ul > li a {
-  font-size: 0.88em;
-  color: #1a73e8;             /* Google Sites 经典蓝 */
+nav ul.top-level > li > ul > li {
+  margin: 4px 0;
+  font-weight: normal;
 }
 
-/* 正文标题字体和间距调整 */
+/* 链接样式 */
+nav a {
+  color: #1a73e8;
+  font-size: 0.92em;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* 主内容区域样式 */
+main {
+  margin-left: 220px; /* 与导航宽度匹配 */
+  padding: 30px 40px;
+  max-width: 1000px;
+  box-sizing: border-box;
+}
+
+/* 个人信息卡片 */
+.profile {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 30px;
+}
+
+.profile img {
+  width: 180px;
+  height: auto;
+  border-radius: 4px;
+  margin-right: 20px;
+}
+
+.profile-info h1 {
+  margin: 0 0 10px 0;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.profile-info p {
+  margin: 3px 0;
+  font-size: 0.95em;
+}
+
+.profile-info a {
+  color: #1a73e8;
+  text-decoration: none;
+}
+
+.profile-info a:hover {
+  text-decoration: underline;
+}
+
+/* section 标题和内容布局 */
+section {
+  margin-bottom: 40px;
+}
+
 section h1 {
   font-size: 1.5em;
-  margin-top: 36px;
+  margin-top: 40px;
   margin-bottom: 12px;
-  border-bottom: 1px solid #e4e4e4;
   padding-bottom: 6px;
+  border-bottom: 1px solid #e4e4e4;
   font-weight: 600;
 }
 
 section h2 {
-  font-size: 1.1em;
+  font-size: 1.2em;
   margin-top: 24px;
   margin-bottom: 6px;
   font-weight: 600;
 }
 
-/* 列表项目间距增大 */
+/* 列表排版 */
+ul, ol {
+  margin: 0 0 10px 20px;
+}
+
 li {
   margin-bottom: 6px;
   line-height: 1.5;
 }
 
-/* 链接颜色和悬停效果 */
+/* 链接颜色在正文中也保持一致 */
 a {
   color: #1a73e8;
   text-decoration: none;
