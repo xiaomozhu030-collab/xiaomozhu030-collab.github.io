@@ -1,153 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Academic Homepage</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <style>
-        /* General Styles */
-        body {
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            height: 100vh;
-            background-color: #f4f4f9;
-        }
-        
-        /* Left Sidebar */
-        #sidebar {
-            width: 250px;
-            background-color: #222;
-            color: white;
-            padding: 20px;
-            position: fixed;
-            height: 100%;
-            overflow-y: auto;
-        }
-
-        #sidebar h2 {
-            margin-top: 0;
-        }
-
-        #sidebar ul {
-            list-style: none;
-            padding-left: 0;
-        }
-
-        #sidebar ul li {
-            margin: 20px 0;
-        }
-
-        #sidebar ul li a {
-            text-decoration: none;
-            color: white;
-            font-size: 18px;
-            display: block;
-        }
-
-        #sidebar ul li a:hover {
-            color: #f1f1f1;
-        }
-
-        /* Content Area */
-        #content {
-            margin-left: 260px;
-            padding: 20px;
-            width: calc(100% - 260px);
-        }
-
-        #content h1 {
-            margin-top: 0;
-            font-size: 32px;
-            color: #333;
-        }
-
-        #content p {
-            font-size: 18px;
-            line-height: 1.6;
-            color: #666;
-        }
-
-        /* Styling for links and CV section */
-        .cv-link {
-            font-size: 18px;
-            color: #0088cc;
-        }
-
-        .cv-link:hover {
-            text-decoration: underline;
-        }
-
-        /* Styling for section headings */
-        h3 {
-            color: #444;
-        }
-
-        /* Optional styling for the photo */
-        .profile-photo {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            margin-bottom: 20px;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Xiaomo Zhu | Homepage</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
 </head>
+
 <body>
-
-<!-- Sidebar -->
-<div id="sidebar">
-    <h2>Xintong Zhan</h2>
-    <ul>
-        <li><a href="#bio">Bio</a></li>
-        <li><a href="#employment">Employment</a></li>
-        <li><a href="#education">Education</a></li>
+  <div class="container">
+    <!-- 左侧导航栏 -->
+    <nav class="sidebar">
+      <div class="profile">
+        <img src="your-photo.jpg" alt="Xiaomo Zhu" class="profile-img">
+        <h2>Xiaomo Zhu</h2>
+        <p class="subtitle">Ph.D. Student, UCAS</p>
+      </div>
+      <ul>
+        <li><a href="#about">About</a></li>
         <li><a href="#research">Research</a></li>
+        <li><a href="#teaching">Teaching</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#awards">Awards</a></li>
         <li><a href="#contact">Contact</a></li>
-        <li><a href="#cv">CV</a></li>
-    </ul>
-</div>
+      </ul>
+    </nav>
 
-<!-- Main Content -->
-<div id="content">
-    <section id="bio">
-        <h1>Bio</h1>
-        <img class="profile-photo" src="profile.jpg" alt="Profile Photo">
-        <p>Assistant Professor at [Your University]. Research interests include digital economy, platform competition, and AI-driven policies.</p>
-    </section>
+    <!-- 右侧主内容 -->
+    <main class="content">
+      <section id="about">
+        <h1>Xiaomo Zhu</h1>
+        <p>Ph.D. Student in Theoretical Computer Science<br>
+        School of Economics and Management, University of Chinese Academy of Sciences</p>
+        <p>Email: <a href="mailto:zhuxiaomo23@mails.ucas.ac.cn">zhuxiaomo23@mails.ucas.ac.cn</a></p>
+      </section>
 
-    <section id="employment">
-        <h3>Employment</h3>
+      <section id="research">
+        <h2>Research Interests</h2>
         <ul>
-            <li>Assistant Professor, [Your Department], [Your University], 2022-Present</li>
-            <li>Visiting Researcher, [Organization Name], 2020-2022</li>
+          <li>Clustering and Approximation Algorithms</li>
+          <li>Digital Economy and Platform Competition</li>
+          <li>Antitrust and Regulation of AI Platforms</li>
         </ul>
-    </section>
+      </section>
 
-    <section id="education">
-        <h3>Education</h3>
+      <section id="teaching">
+        <h2>Teaching &amp; Skills</h2>
+        <p>Teaching Assistant — Computational Economics (2024)</p>
+        <p>Skills: Python, Stata, LaTeX, HTML/CSS</p>
+      </section>
+
+      <section id="publications">
+        <h2>Selected Publications</h2>
         <ul>
-            <li>Ph.D. in [Your Field], [University Name], 2016-2020</li>
-            <li>B.A. in [Your Field], [University Name], 2012-2016</li>
+          <li><b>The Power of Uniform Sampling for Clustering</b>, JMLR (Under Review), 2025.</li>
+          <li><b>Blessing or Curse? Data Brokers and Publisher Competition</b>, Working Paper.</li>
         </ul>
-    </section>
+      </section>
 
-    <section id="research">
-        <h3>Research</h3>
-        <p>My research explores how digital platforms shape economic dynamics and the role of AI in competitive markets. I am particularly focused on the intersection of platform strategy, consumer behavior, and public policy.</p>
-    </section>
+      <section id="awards">
+        <h2>Awards &amp; Honors</h2>
+        <ul>
+          <li>Outstanding Graduate Scholarship, UCAS (2024)</li>
+          <li>National Scholarship for Graduate Students (2023)</li>
+        </ul>
+      </section>
 
-    <section id="contact">
-        <h3>Contact</h3>
-        <p>Email: <a href="mailto:xintongzhan@fudan.edu.cn">xintongzhan@fudan.edu.cn</a></p>
-    </section>
-
-    <section id="cv">
-        <h3>CV</h3>
-        <p>For detailed information on my professional experience, publications, and academic contributions, you can download my <a class="cv-link" href="cv.pdf" target="_blank">CV</a>.</p>
-    </section>
-</div>
-
+      <section id="contact">
+        <h2>Contact</h2>
+        <p>📧 Email: zhuxiaomo23@mails.ucas.ac.cn</p>
+        <p>🌐 GitHub: <a href="https://github.com/your-username">github.com/your-username</a></p>
+      </section>
+    </main>
+  </div>
 </body>
 </html>
