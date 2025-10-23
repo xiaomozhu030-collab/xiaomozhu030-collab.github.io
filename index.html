@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Xintong-style Academic Webpage</title>
+  <title>Xintong-style Academic Homepage</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Sans&display=swap" rel="stylesheet">
   <style>
     body {
@@ -17,7 +17,7 @@
       min-height: 100vh;
     }
 
-    /* 左侧导航栏 */
+    /* --- 左侧导航栏 --- */
     nav {
       position: fixed;
       top: 0;
@@ -28,34 +28,37 @@
       border-right: 1px solid #ddd;
       padding: 25px 20px;
       overflow-y: auto;
-      transition: all 0.3s ease;
     }
 
-    /* 个人信息 */
+    /* 头像与基本信息 */
     .profile {
       text-align: center;
-      margin-bottom: 25px;
+      margin-top: 10px;
+      margin-bottom: 30px;
     }
     .profile img {
-      width: 100px;
-      height: 100px;
+      width: 120px;
+      height: 120px;
       border-radius: 50%;
       object-fit: cover;
-      margin-bottom: 10px;
-      box-shadow: 0 0 4px rgba(0,0,0,0.2);
+      display: block;
+      margin: 0 auto 10px auto;
+      box-shadow: 0 0 5px rgba(0,0,0,0.15);
+      border: 2px solid #fff;
     }
-    .profile h2 {
-      font-size: 1.1rem;
+    .profile-text h2 {
+      font-size: 1.15rem;
       color: #004B97;
-      margin: 0;
+      margin: 6px 0 2px 0;
+      font-weight: 600;
     }
-    .profile p {
+    .profile-text p {
       font-size: 0.9rem;
       color: #666;
-      margin: 2px 0 0 0;
+      margin: 0;
     }
 
-    /* 菜单层次 */
+    /* --- 导航菜单 --- */
     nav ul { list-style: none; padding: 0; margin: 0; }
     nav li { margin: 6px 0; cursor: pointer; }
     nav a {
@@ -74,15 +77,10 @@
       max-height: 0;
       transition: max-height 0.3s ease;
     }
-    nav ul ul.expanded {
-      max-height: 300px;
-    }
-    nav ul ul li {
-      margin: 4px 0;
-      font-weight: 400;
-    }
+    nav ul ul.expanded { max-height: 300px; }
+    nav ul ul li { margin: 4px 0; font-weight: 400; }
 
-    /* 主体内容 */
+    /* --- 主体内容 --- */
     main {
       margin-left: 290px;
       padding: 40px 70px;
@@ -118,11 +116,13 @@
       <!-- 个人信息 -->
       <div class="profile">
         <img src="your-photo.jpg" alt="Your photo">
-        <h2>Your Name</h2>
-        <p>Your Title / University</p>
+        <div class="profile-text">
+          <h2>Your Name</h2>
+          <p>Your Title / University</p>
+        </div>
       </div>
 
-      <!-- 侧栏菜单 -->
+      <!-- 导航栏 -->
       <ul>
         <li class="collapsible"><a href="#home">Xintong’s Webpage (Home)</a>
           <ul>
@@ -152,50 +152,91 @@
       </ul>
     </nav>
 
+    <!-- 右侧主内容 -->
     <main>
-      <!-- 示例内容（你可以保留上一版的正文内容） -->
+      <!-- 首页 -->
       <section id="home">
         <h1>Your Name</h1>
         <p>Department of Finance, School of Management, Your University</p>
-        <p>Email: <a href="mailto:you@example.com">you@example.com</a></p>
+        <p>Email: <a href="mailto:you@example.com">you@example.com</a> | <a href="#">CV</a> | <a href="#">LinkedIn</a> | <a href="#">Google Scholar</a></p>
 
         <h2 id="employment">Employment</h2>
         <ul>
           <li>Li-Dasan Chair Professor of Finance, Fudan University (2022–present)</li>
+          <li>Assistant Professor of Finance, CUHK (2018–2021)</li>
         </ul>
 
         <h2 id="education">Education</h2>
         <ul>
           <li>Ph.D. in Finance, CUHK</li>
+          <li>B.A. in Finance, Peking University</li>
         </ul>
+
+        <h2 id="publications">Selected Refereed Publications</h2>
+        <ul>
+          <li>Product Market Threats and Stock Crash Risk (<i>Management Science</i>, 2019)</li>
+          <li>Option Return Predictability (<i>Review of Financial Studies</i>, 2022)</li>
+        </ul>
+
+        <h2 id="working">Selected Working Papers (SSRN)</h2>
+        <ul><li>Forecasting Option Returns with News (AFA 2025)</li></ul>
+
+        <h2 id="grants">Selected Research Grants</h2>
+        <ul><li>NSFC, 2022–2025</li></ul>
+
+        <h2 id="awards">Selected Honors & Awards</h2>
+        <ul><li>CFA Institute Prize, 2024</li></ul>
       </section>
 
+      <!-- Teaching & Skills -->
       <section id="teaching">
         <h1>Teaching & Skills</h1>
+
         <h2 id="teaching-exp">Teaching Experience</h2>
         <ul>
           <li>Fudan University: Real Estate Finance</li>
+          <li>CUHK: Financial Management</li>
         </ul>
+
         <h2 id="skills">Professional Skills / Qualifications</h2>
         <ul>
-          <li>CFA, CAIA</li>
+          <li>CFA Charterholder</li>
+          <li>CAIA Charterholder</li>
         </ul>
       </section>
 
+      <!-- Presentations -->
       <section id="presentations">
         <h1>Presentations</h1>
+
         <h2 id="academic-pres">Presentations to Academics</h2>
-        <ul><li>AFA 2025</li></ul>
+        <ul>
+          <li>AFA 2025 (San Francisco)</li>
+        </ul>
+
+        <h2 id="industry-pres">Presentations to Industry Professionals</h2>
+        <ul>
+          <li>Hong Kong Fintech Forum 2024</li>
+        </ul>
+
+        <h2 id="coauthor-pres">Presentations by Co-authors</h2>
+        <ul>
+          <li>Option Trading and Stock Price Informativeness (WFA 2023)</li>
+        </ul>
       </section>
 
+      <!-- Discussions -->
       <section id="discussions">
         <h1>Discussions</h1>
-        <ul><li>Discussant at CICF 2025</li></ul>
+        <ul>
+          <li>Discussant, “Network Factors for Idiosyncratic Volatility Spillover,” CICF 2025</li>
+        </ul>
       </section>
 
+      <!-- 中文简介 -->
       <section id="chinese">
         <h1>中文简介</h1>
-        <p>这里填写中文简介内容。</p>
+        <p>这里填写中文简介内容。可以包括教育背景、研究方向、发表论文、获奖情况等。</p>
       </section>
     </main>
   </div>
@@ -224,12 +265,15 @@
       });
     });
 
-    // 折叠功能
+    // 折叠功能（点击主类时展开并自动收起其他）
     document.querySelectorAll('.collapsible').forEach(item=>{
       const sublist=item.querySelector('ul');
       item.addEventListener('click',e=>{
-        // 防止点击子链接触发折叠
         if(e.target.tagName.toLowerCase()==='a' && e.target.getAttribute('href').startsWith('#')) return;
+        // 折叠其他
+        document.querySelectorAll('.collapsible ul').forEach(u=>{
+          if(u!==sublist)u.classList.remove('expanded');
+        });
         sublist.classList.toggle('expanded');
       });
     });
