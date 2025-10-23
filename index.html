@@ -17,7 +17,7 @@
       min-height: 100vh;
     }
 
-    /* --- 左侧导航栏 --- */
+    /* 左侧导航栏 */
     nav {
       position: fixed;
       top: 0;
@@ -30,35 +30,6 @@
       overflow-y: auto;
     }
 
-    /* 头像与基本信息 */
-    .profile {
-      text-align: center;
-      margin-top: 10px;
-      margin-bottom: 30px;
-    }
-    .profile img {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      object-fit: cover;
-      display: block;
-      margin: 0 auto 10px auto;
-      box-shadow: 0 0 5px rgba(0,0,0,0.15);
-      border: 2px solid #fff;
-    }
-    .profile-text h2 {
-      font-size: 1.15rem;
-      color: #004B97;
-      margin: 6px 0 2px 0;
-      font-weight: 600;
-    }
-    .profile-text p {
-      font-size: 0.9rem;
-      color: #666;
-      margin: 0;
-    }
-
-    /* --- 导航菜单 --- */
     nav ul { list-style: none; padding: 0; margin: 0; }
     nav li { margin: 6px 0; cursor: pointer; }
     nav a {
@@ -80,11 +51,11 @@
     nav ul ul.expanded { max-height: 300px; }
     nav ul ul li { margin: 4px 0; font-weight: 400; }
 
-    /* --- 主体内容 --- */
+    /* 主体内容 */
     main {
       margin-left: 290px;
       padding: 40px 70px;
-      max-width: 900px;
+      max-width: 950px;
       line-height: 1.6;
     }
     section { margin-bottom: 90px; }
@@ -102,10 +73,36 @@
     ul { padding-left:20px; }
     li { margin:6px 0; }
 
-    /* 响应式 */
+    /* 顶部个人信息布局 */
+    .intro {
+      display: flex;
+      align-items: flex-start;
+      gap: 25px;
+      margin-bottom: 25px;
+    }
+    .intro img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 0 5px rgba(0,0,0,0.15);
+    }
+    .intro-text h1 {
+      font-size: 1.5rem;
+      color: #004B97;
+      margin: 0 0 10px 0;
+    }
+    .intro-text p {
+      margin: 3px 0;
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+
     @media (max-width:768px){
       nav{position:relative;width:100%;height:auto;border-right:none;border-bottom:1px solid #ddd;}
       main{margin:0;padding:20px;}
+      .intro{flex-direction:column;align-items:center;text-align:center;}
+      .intro img{margin-bottom:15px;}
     }
   </style>
 </head>
@@ -113,16 +110,6 @@
 <body>
   <div class="container">
     <nav>
-      <!-- 个人信息 -->
-      <div class="profile">
-        <img src="your-photo.jpg" alt="Your photo">
-        <div class="profile-text">
-          <h2>Your Name</h2>
-          <p>Your Title / University</p>
-        </div>
-      </div>
-
-      <!-- 导航栏 -->
       <ul>
         <li class="collapsible"><a href="#home">Xintong’s Webpage (Home)</a>
           <ul>
@@ -152,18 +139,28 @@
       </ul>
     </nav>
 
-    <!-- 右侧主内容 -->
     <main>
-      <!-- 首页 -->
       <section id="home">
-        <h1>Your Name</h1>
-        <p>Department of Finance, School of Management, Your University</p>
-        <p>Email: <a href="mailto:you@example.com">you@example.com</a> | <a href="#">CV</a> | <a href="#">LinkedIn</a> | <a href="#">Google Scholar</a></p>
+        <!-- 头像 + 文字并排区域 -->
+        <div class="intro">
+          <img src="https://avatars.githubusercontent.com/u/9919?v=4" alt="Xintong Zhan">
+          <div class="intro-text">
+            <h1>Xintong (Eunice) ZHAN</h1>
+            <p>Department of Finance<br>
+            <a href="https://www.fdsm.fudan.edu.cn/en/">School of Management</a>, <a href="https://www.fudan.edu.cn/en/">Fudan University</a></p>
+            <p>Fellow, <a href="https://abfer.org/people/senior-fellows-and-fellows">Asian Bureau of Finance and Economic Research (ABFER)</a><br>
+            Senior Research Fellow, <a href="https://www.igef.cuhk.edu.hk/people/">Lau Chor Tak Institute of Global Economics and Finance (IGEF)</a><br>
+            Editorial Board, <a href="https://rpc.cfainstitute.org/en/research/financial-analysts-journal/editorial-team">Financial Analysts Journal (FAJ)</a></p>
+            <p>Email: <a href="mailto:xintongzhan@fudan.edu.cn">xintongzhan@fudan.edu.cn</a> or 
+            <a href="mailto:xintongzhan@hotmail.com">xintongzhan@hotmail.com</a></p>
+            <p>CV: [<a href="#">PDF</a>] | <a href="#">Fudan Web</a> | <a href="#">LinkedIn</a> | <a href="#">ORCiD</a> | <a href="#">Google Scholar</a></p>
+          </div>
+        </div>
 
         <h2 id="employment">Employment</h2>
         <ul>
           <li>Li-Dasan Chair Professor of Finance, Fudan University (2022–present)</li>
-          <li>Assistant Professor of Finance, CUHK (2018–2021)</li>
+          <li>Assistant Professor of Finance and Real Estate, CUHK (2018–2021)</li>
         </ul>
 
         <h2 id="education">Education</h2>
@@ -171,78 +168,35 @@
           <li>Ph.D. in Finance, CUHK</li>
           <li>B.A. in Finance, Peking University</li>
         </ul>
-
-        <h2 id="publications">Selected Refereed Publications</h2>
-        <ul>
-          <li>Product Market Threats and Stock Crash Risk (<i>Management Science</i>, 2019)</li>
-          <li>Option Return Predictability (<i>Review of Financial Studies</i>, 2022)</li>
-        </ul>
-
-        <h2 id="working">Selected Working Papers (SSRN)</h2>
-        <ul><li>Forecasting Option Returns with News (AFA 2025)</li></ul>
-
-        <h2 id="grants">Selected Research Grants</h2>
-        <ul><li>NSFC, 2022–2025</li></ul>
-
-        <h2 id="awards">Selected Honors & Awards</h2>
-        <ul><li>CFA Institute Prize, 2024</li></ul>
       </section>
 
-      <!-- Teaching & Skills -->
       <section id="teaching">
         <h1>Teaching & Skills</h1>
-
         <h2 id="teaching-exp">Teaching Experience</h2>
         <ul>
           <li>Fudan University: Real Estate Finance</li>
           <li>CUHK: Financial Management</li>
         </ul>
-
-        <h2 id="skills">Professional Skills / Qualifications</h2>
-        <ul>
-          <li>CFA Charterholder</li>
-          <li>CAIA Charterholder</li>
-        </ul>
       </section>
 
-      <!-- Presentations -->
       <section id="presentations">
         <h1>Presentations</h1>
-
-        <h2 id="academic-pres">Presentations to Academics</h2>
-        <ul>
-          <li>AFA 2025 (San Francisco)</li>
-        </ul>
-
-        <h2 id="industry-pres">Presentations to Industry Professionals</h2>
-        <ul>
-          <li>Hong Kong Fintech Forum 2024</li>
-        </ul>
-
-        <h2 id="coauthor-pres">Presentations by Co-authors</h2>
-        <ul>
-          <li>Option Trading and Stock Price Informativeness (WFA 2023)</li>
-        </ul>
+        <ul><li>AFA 2025 (San Francisco)</li></ul>
       </section>
 
-      <!-- Discussions -->
       <section id="discussions">
         <h1>Discussions</h1>
-        <ul>
-          <li>Discussant, “Network Factors for Idiosyncratic Volatility Spillover,” CICF 2025</li>
-        </ul>
+        <ul><li>Discussant, “Network Factors for Idiosyncratic Volatility Spillover,” CICF 2025</li></ul>
       </section>
 
-      <!-- 中文简介 -->
       <section id="chinese">
         <h1>中文简介</h1>
-        <p>这里填写中文简介内容。可以包括教育背景、研究方向、发表论文、获奖情况等。</p>
+        <p>这里填写中文简介内容。</p>
       </section>
     </main>
   </div>
 
   <script>
-    // 平滑滚动
     document.querySelectorAll('nav a').forEach(anchor=>{
       anchor.addEventListener('click',function(e){
         if(this.getAttribute('href').startsWith('#')){
@@ -252,25 +206,10 @@
       });
     });
 
-    // 当前高亮
-    window.addEventListener('scroll',()=>{
-      const sections=document.querySelectorAll('section');
-      let current='';
-      sections.forEach(section=>{
-        if(pageYOffset>=section.offsetTop-120){current=section.getAttribute('id');}
-      });
-      document.querySelectorAll('nav a').forEach(a=>{
-        a.classList.remove('active');
-        if(a.getAttribute('href')===`#${current}`)a.classList.add('active');
-      });
-    });
-
-    // 折叠功能（点击主类时展开并自动收起其他）
     document.querySelectorAll('.collapsible').forEach(item=>{
       const sublist=item.querySelector('ul');
       item.addEventListener('click',e=>{
         if(e.target.tagName.toLowerCase()==='a' && e.target.getAttribute('href').startsWith('#')) return;
-        // 折叠其他
         document.querySelectorAll('.collapsible ul').forEach(u=>{
           if(u!==sublist)u.classList.remove('expanded');
         });
