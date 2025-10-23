@@ -5,18 +5,20 @@
   <title>我的学术主页</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
-    /* 布局样式：左侧导航 + 右侧内容 */
     body {
       margin: 0;
-      font-family: "Arial", sans-serif;
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      color: #222;
+      background-color: #ffffff;
       display: flex;
-      min-height: 100vh;
+      line-height: 1.6;
     }
-    /* 左侧导航栏 */
+    /* 左侧导航 */
     nav {
       width: 220px;
-      background-color: #f5f5f5;
-      padding: 20px;
+      background-color: #f3f4f6; /* 更浅的灰色 */
+      border-right: 1px solid #e2e2e2;
+      padding: 20px 15px;
       box-sizing: border-box;
       position: fixed;
       top: 0;
@@ -24,51 +26,80 @@
       overflow-y: auto;
     }
     nav h2 {
-      margin-top: 0;
-      font-size: 1.2em;
+      font-size: 1.25em;
+      margin: 0 0 10px 0;
+      color: #111;
     }
     nav ul {
       list-style: none;
       padding-left: 0;
+      margin: 0;
     }
     nav ul li {
       margin: 8px 0;
     }
     nav ul li a {
+      color: #0066c0;            /* 蓝色链接 */
       text-decoration: none;
-      color: #0645AD;
+      font-size: 0.95em;
     }
     nav ul li a:hover {
       text-decoration: underline;
     }
+
     /* 右侧内容区域 */
     main {
-      margin-left: 240px; /* 留出导航栏空间 */
-      padding: 20px;
-      flex: 1;
+      margin-left: 240px;
+      padding: 30px 40px;
+      max-width: 1000px;
     }
-    section {
-      margin-bottom: 40px;
-    }
-    section h1 {
-      border-bottom: 2px solid #ddd;
-      padding-bottom: 8px;
-      margin-top: 0;
-    }
-    /* 头像样式 */
+    /* 个人信息卡片 */
     .profile {
       display: flex;
       align-items: flex-start;
       margin-bottom: 30px;
     }
     .profile img {
-      width: 200px;
+      width: 180px;
       height: auto;
-      margin-right: 20px;
       border-radius: 4px;
+      margin-right: 20px;
     }
     .profile-info h1 {
-      margin-top: 0;
+      margin: 0 0 10px 0;
+      font-size: 2em;
+      font-weight: bold;
+    }
+    .profile-info p {
+      margin: 3px 0;
+      font-size: 0.95em;
+    }
+    .profile-info a {
+      color: #0066c0;
+      text-decoration: none;
+    }
+    .profile-info a:hover {
+      text-decoration: underline;
+    }
+
+    /* 每个 section 的标题样式 */
+    section {
+      margin-bottom: 40px;
+    }
+    section h1 {
+      font-size: 1.6em;
+      margin-top: 40px;
+      margin-bottom: 10px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #e0e0e0;
+    }
+    section h2 {
+      font-size: 1.2em;
+      margin-top: 20px;
+      margin-bottom: 6px;
+    }
+    ul, ol {
+      margin: 0 0 10px 20px;
     }
   </style>
 </head>
@@ -95,51 +126,45 @@
 
   <!-- 右侧内容 -->
   <main>
-    <!-- 主页 Section -->
     <section id="home">
       <div class="profile">
-        <!-- 将 your_photo.jpg 替换为你上传到仓库中的头像文件名 -->
-        <img src="photo.jpeg" alt="Profile Photo">
+        <img src="your_photo.jpg" alt="Profile Photo">
         <div class="profile-info">
           <h1>你的名字 (Your Name)</h1>
-          <p><strong>Title / 职称：</strong>例如，“金融学教授”</p>
-          <p><strong>Department / 学院：</strong>复旦大学管理学院金融与财务学系</p>
+          <p><strong>Title / 职称：</strong> 例如 “金融学教授”</p>
+          <p><strong>Department / 学院：</strong> 复旦大学管理学院金融与财务学系</p>
           <p><strong>Email：</strong><a href="mailto:you@example.com">you@example.com</a></p>
-          <p><strong>Links：</strong><a href="#">CV</a> | <a href="#">ORCID</a> | <a href="#">Google Scholar</a></p>
+          <p><strong>Links：</strong><a href="#">CV</a> | <a href="#">ORCID</a> | <a href="#">Google Scholar</a></p>
         </div>
       </div>
       <p>在这里写几句简介，说明你的研究领域和兴趣。</p>
     </section>
 
-    <!-- Employment -->
     <section id="employment">
       <h1>Employment</h1>
       <ul>
         <li>Li‑Dasan Chair Professor of Finance, School of Management, Fudan University (2022–present)</li>
         <li>Assistant Professor of Finance and Real Estate, CUHK Business School, Chinese University of Hong Kong (2018–2021)</li>
         <li>Assistant Professor of Finance, Erasmus School of Economics, Erasmus University Rotterdam (2016–2018)</li>
-        <!-- 按需添加或修改 -->
       </ul>
     </section>
 
-    <!-- Education -->
     <section id="education">
       <h1>Education</h1>
       <ul>
         <li>Ph.D. in Finance, The Chinese University of Hong Kong (2012–2016) — Supervisor: Hua Zhang</li>
         <li>B.A. in Finance, Guanghua School of Management, Peking University (2008–2012)</li>
-        <!-- 按需添加或修改 -->
       </ul>
     </section>
 
+    <!-- 其余 section 与之前示例相同，可以照抄并自定义内容 -->
     <!-- Selected Refereed Publications -->
     <section id="publications">
       <h1>Selected Refereed Publications</h1>
       <ol>
         <li><em>Product Market Threats and Stock Crash Risk</em>, <strong>Management Science</strong> 65(9), 4011‑4031 (2019).</li>
         <li><em>Peer Effects of Corporate Social Responsibility</em>, <strong>Management Science</strong> 65(12), 5487‑5503 (2019).</li>
-        <li><em>Does Change in the Information Environment Affect Financing Choices?</em>, <strong>Management Science</strong> 65(12), 5676‑5696 (2019).</li>
-        <!-- 列出其他论文 -->
+        <!-- 更多条目… -->
       </ol>
     </section>
 
@@ -147,10 +172,8 @@
     <section id="working-papers">
       <h1>Selected Working Papers (SSRN)</h1>
       <ul>
-        <li><em>Forecasting Option Returns with News</em> — with Jie Cao, Bing Han, Gang Li, Ruijing Yang (2022–2025).</li>
-        <li><em>Betting Against the Crowd: Option Trading and Market Risk Premium</em> — with Jie Cao, Gang Li, Guofu Zhou.</li>
-        <li><em>Foreign Institutional Ownership and Corporate Carbon Emissions</em> — with Jie Cao, Weiming Zhang, Yaojia Zhang.</li>
-        <!-- 更多工作论文 -->
+        <li><em>Forecasting Option Returns with News</em> — with Jie Cao, Bing Han, Gang Li, Ruijing Yang.</li>
+        <!-- 更多条目… -->
       </ul>
     </section>
 
@@ -159,9 +182,7 @@
       <h1>Selected Research Grants</h1>
       <ul>
         <li>National Natural Science Foundation of China (NSFC) — General Program (PI), 2022.</li>
-        <li>Hong Kong Research Grants Council — General Research Fund (PI), 2021/22, HK$ 825,993.</li>
-        <li>Hong Kong Research Grants Council — Early Career Scheme (PI), 2019/20, HK$ 450,000.</li>
-        <!-- 更多项目 -->
+        <!-- 更多条目… -->
       </ul>
     </section>
 
@@ -170,7 +191,7 @@
       <h1>Selected Honors & Awards</h1>
       <ul>
         <li>CFA Institute Prize (Best Paper), Australian Finance & Banking Conference, 2024.</li>
-        <!-- 可补充其他荣誉 -->
+        <!-- 更多条目… -->
       </ul>
     </section>
 
@@ -180,19 +201,7 @@
       <h2>School of Management, Fudan University</h2>
       <ul>
         <li>Real Estate Finance (Master & Undergraduate)</li>
-        <li>Sustainable Finance (Master)</li>
-        <li>Financial Markets and Institutions (MPhil‑PhD)</li>
-      </ul>
-      <h2>CUHK Business School, Chinese University of Hong Kong</h2>
-      <ul>
-        <li>Financial Management (Undergraduate)</li>
-        <li>Real Estate Finance (Master)</li>
-      </ul>
-      <h2>Erasmus School of Economics, Erasmus University Rotterdam</h2>
-      <ul>
-        <li>Seminar on Corporate Governance (Master)</li>
-        <li>Seminar on Corporate Finance (MPhil‑PhD)</li>
-        <li>Behavioral Finance (Undergraduate)</li>
+        <!-- 更多课程… -->
       </ul>
     </section>
 
@@ -202,7 +211,6 @@
       <ul>
         <li>Chartered Financial Analyst (CFA) Charterholder since 2016.</li>
         <li>Chartered Alternative Investment Analyst (CAIA) Charterholder since 2018.</li>
-        <!-- 添加其他技能或资格 -->
       </ul>
     </section>
 
@@ -212,17 +220,7 @@
       <h2>Presentations to Academics</h2>
       <ul>
         <li>American Finance Association Annual Meeting 2025 — San Francisco, USA.</li>
-        <li>Seoul National University 2025 — Seoul, South Korea.</li>
-        <li>Finance Down Under Conference 2025 — Melbourne, Australia.</li>
-        <!-- 继续列出其他学术演讲 -->
-      </ul>
-      <h2>Presentations to Industry Professionals</h2>
-      <ul>
-        <li>示例：某金融机构培训演讲，日期地点。</li>
-      </ul>
-      <h2>Presentations by Co-authors</h2>
-      <ul>
-        <li>合作者代表团队的演讲可以列在此处。</li>
+        <!-- 更多活动… -->
       </ul>
     </section>
 
@@ -231,17 +229,14 @@
       <h1>Discussions</h1>
       <ul>
         <li>Discussant for “Network Factors for Idiosyncratic Volatility Spillover”, CICF 2025, China.</li>
-        <li>Discussant for “Environmental Partisanship in the Crowdfunding of Technology”, CICF 2025, China.</li>
-        <li>Discussant for “Factor Investing with Delays”, FIRS 2025, South Korea.</li>
-        <!-- 按需添加其他讨论活动 -->
+        <!-- 更多讨论… -->
       </ul>
     </section>
 
     <!-- 中文简介 -->
     <section id="bio-cn">
       <h1>中文简介</h1>
-      <p>用中文写一段个人简介、教育背景和研究经历。例如：</p>
-      <p>战昕彤教授现任复旦大学管理学院李达三金融学讲席教授，博士生导师，亚洲经济金融研究局 (ABFER) 研究员，香港中文大学刘佐德全球经济及金融研究所名誉高级研究员。她是特许金融分析师(CFA)和特许另类投资分析师(CAIA)持证人……</p>
+      <p>用中文撰写个人简介、教育背景与研究经历。可以参考原网站的中文简介部分进行编写。</p>
     </section>
   </main>
 </body>
