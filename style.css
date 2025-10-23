@@ -1,131 +1,62 @@
-/* 通用字体与颜色设置 */
-body {
-  margin: 0;
-  font-family: "Helvetica Neue", Arial, sans-serif;
-  color: #222;
-  background-color: #ffffff;
-  display: flex;
-  line-height: 1.6;
-}
-
-/* 左侧导航栏样式 */
+/* 调整导航栏宽度和背景色 */
 nav {
-  width: 220px;
-  background-color: #f3f4f6;   /* 浅灰背景 */
-  border-right: 1px solid #e2e2e2;
-  padding: 20px 15px;
-  box-sizing: border-box;
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  overflow-y: auto;
-}
-
-nav h2 {
-  font-size: 1.25em;
-  margin: 0 0 10px 0;
-  color: #111;
-}
-
-nav ul.top-level {
-  list-style: none;
-  padding-left: 0;
-  margin: 0;
-}
-
-nav ul.top-level > li {
-  margin-bottom: 12px;
-  font-weight: bold;
-}
-
-nav ul.top-level > li > ul {
-  margin-top: 6px;
-  margin-left: 16px;
-  list-style: none;
-  padding-left: 0;
-}
-
-nav ul.top-level > li > ul > li {
-  margin: 4px 0;
-  font-weight: normal;
-}
-
-nav ul.top-level a {
-  color: #0066c0;
-  text-decoration: none;
-  font-size: 0.92em;
-}
-
-nav ul.top-level a:hover {
-  text-decoration: underline;
-}
-
-/* 主内容区域 */
-main {
-  margin-left: 240px; /* 与导航栏宽度保持一致 */
-  padding: 30px 40px;
-  max-width: 1000px;
-  box-sizing: border-box;
-}
-
-/* 个人信息卡片 */
-.profile {
-  display: flex;
-  align-items: flex-start;
-  margin-bottom: 30px;
-}
-
-.profile img {
   width: 180px;
-  height: auto;
-  border-radius: 4px;
-  margin-right: 20px;
+  background-color: #f5f5f5;
+  border-right: 1px solid #ddd;
+  padding: 20px 12px;
 }
 
-.profile-info h1 {
-  margin: 0 0 10px 0;
-  font-size: 2em;
-  font-weight: bold;
+/* 顶级标题更像Google Sites的样式 */
+nav ul.top-level > li {
+  margin-top: 20px;            /* 增加页面之间的间距 */
+  font-size: 1em;
+  font-weight: 600;
+  border-top: 1px solid #e0e0e0;
+  padding-top: 10px;
 }
 
-.profile-info p {
-  margin: 3px 0;
-  font-size: 0.95em;
+/* 顶部的第一个元素去掉边框 */
+nav ul.top-level > li:first-child {
+  border-top: none;
+  padding-top: 0;
+  margin-top: 0;
 }
 
-.profile-info a {
-  color: #0066c0;
-  text-decoration: none;
+/* 子链接字体更小，颜色更柔和 */
+nav ul.top-level > li > ul > li a {
+  font-size: 0.88em;
+  color: #1a73e8;             /* Google Sites 经典蓝 */
 }
 
-.profile-info a:hover {
-  text-decoration: underline;
-}
-
-/* Section 样式 */
-section {
-  margin-bottom: 40px;
-}
-
+/* 正文标题字体和间距调整 */
 section h1 {
-  font-size: 1.6em;
-  margin-top: 40px;
-  margin-bottom: 10px;
-  padding-bottom: 8px;
-  border-bottom: 2px solid #e0e0e0;
+  font-size: 1.5em;
+  margin-top: 36px;
+  margin-bottom: 12px;
+  border-bottom: 1px solid #e4e4e4;
+  padding-bottom: 6px;
+  font-weight: 600;
 }
 
 section h2 {
-  font-size: 1.2em;
-  margin-top: 20px;
+  font-size: 1.1em;
+  margin-top: 24px;
   margin-bottom: 6px;
+  font-weight: 600;
 }
 
-ul, ol {
-  margin: 0 0 10px 20px;
-}
-
-/* 调整列表内文本的间距 */
+/* 列表项目间距增大 */
 li {
-  margin-bottom: 4px;
+  margin-bottom: 6px;
+  line-height: 1.5;
+}
+
+/* 链接颜色和悬停效果 */
+a {
+  color: #1a73e8;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
