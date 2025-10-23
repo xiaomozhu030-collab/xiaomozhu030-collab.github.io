@@ -29,6 +29,34 @@
       padding: 25px 20px;
       overflow-y: auto;
     }
+
+    .profile {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .profile img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
+      margin: 0 auto 10px auto;
+      border: 2px solid #fff;
+      box-shadow: 0 0 5px rgba(0,0,0,0.15);
+    }
+    .profile-text h2 {
+      font-size: 1.15rem;
+      color: #004B97;
+      margin: 6px 0 2px 0;
+      font-weight: 600;
+    }
+    .profile-text p {
+      font-size: 0.9rem;
+      color: #666;
+      margin: 0;
+    }
+
+    /* --- 导航菜单 --- */
     nav ul { list-style: none; padding: 0; margin: 0; }
     nav li { margin: 6px 0; cursor: pointer; }
     nav a {
@@ -54,55 +82,61 @@
     main {
       margin-left: 290px;
       padding: 40px 70px;
-      max-width: 900px;
+      max-width: 950px;
       line-height: 1.6;
     }
-    section { margin-bottom: 90px; }
-    h1,h2,h3 { color:#004B97; }
-    h1 { font-size:1.8rem; margin-bottom:.3rem; }
-    h2 {
-      border-bottom:2px solid #004B97;
-      display:inline-block;
-      padding-bottom:4px;
-      margin-top:1.5rem;
-    }
-    h3 { margin-top:1rem; }
-    a { color:#0056b3; text-decoration:none; }
-    a:hover { text-decoration:underline; }
-    ul { padding-left:20px; }
-    li { margin:6px 0; }
 
-    /* --- 顶部头像 + 信息 --- */
-    .intro {
+    /* 顶部头像 + 基本信息区 */
+    .intro-header {
       display: flex;
-      align-items: flex-start;
+      align-items: center;
       gap: 25px;
-      margin-bottom: 25px;
+      margin-bottom: 30px;
+      flex-wrap: wrap;
     }
-    .intro img {
+    .intro-header img {
       width: 160px;
       height: 160px;
       border-radius: 50%;
       object-fit: cover;
-      box-shadow: 0 0 5px rgba(0,0,0,0.15);
+      box-shadow: 0 0 6px rgba(0,0,0,0.15);
     }
     .intro-text h1 {
-      font-size: 1.5rem;
       color: #004B97;
-      margin: 0 0 10px 0;
+      font-size: 1.9rem;
+      margin: 0 0 5px 0;
+      font-weight: 600;
     }
     .intro-text p {
-      margin: 3px 0;
-      font-size: 1rem;
-      line-height: 1.5;
+      margin: 5px 0;
     }
 
-    /* --- 响应式 --- */
-    @media (max-width:768px){
-      nav{position:relative;width:100%;height:auto;border-right:none;border-bottom:1px solid #ddd;}
-      main{margin:0;padding:20px;}
-      .intro{flex-direction:column;align-items:center;text-align:center;}
-      .intro img{margin-bottom:15px;}
+    section { margin-bottom: 80px; }
+    h2 {
+      border-bottom: 2px solid #004B97;
+      display: inline-block;
+      padding-bottom: 4px;
+      margin-top: 1.5rem;
+      color: #004B97;
+    }
+    h3 { color: #004B97; margin-top: 1rem; }
+    a { color: #0056b3; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    ul { padding-left: 20px; }
+    li { margin: 6px 0; }
+
+    /* 响应式 */
+    @media (max-width: 768px) {
+      nav {
+        position: relative;
+        width: 100%;
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid #ddd;
+      }
+      main { margin: 0; padding: 20px; }
+      .intro-header { flex-direction: column; align-items: flex-start; }
+      .intro-header img { width: 130px; height: 130px; }
     }
   </style>
 </head>
@@ -111,6 +145,14 @@
   <div class="container">
     <!-- 左侧导航栏 -->
     <nav>
+      <div class="profile">
+        <img src="your-photo.jpg" alt="Your photo">
+        <div class="profile-text">
+          <h2>Your Name</h2>
+          <p>Your Title / University</p>
+        </div>
+      </div>
+
       <ul>
         <li class="collapsible"><a href="#home">Xintong’s Webpage (Home)</a>
           <ul>
@@ -140,41 +182,64 @@
       </ul>
     </nav>
 
-    <!-- 主体内容 -->
+    <!-- 主内容 -->
     <main>
-      <section id="home">
-        <!-- 顶部头像+信息 -->
-        <div class="intro">
-          <img src="your-photo.jpg" alt="Profile photo">
-          <div class="intro-text">
-            <h1>Xintong (Eunice) ZHAN</h1>
-            <p>Department of Finance<br>
-            <a href="https://www.fdsm.fudan.edu.cn/en/">School of Management</a>, <a href="https://www.fudan.edu.cn/en/">Fudan University</a></p>
-            <p>Fellow, <a href="https://abfer.org/people/senior-fellows-and-fellows">Asian Bureau of Finance and Economic Research (ABFER)</a><br>
-            Senior Research Fellow, <a href="https://www.igef.cuhk.edu.hk/people/">Lau Chor Tak Institute of Global Economics and Finance (IGEF)</a><br>
-            Editorial Board, <a href="https://rpc.cfainstitute.org/en/research/financial-analysts-journal/editorial-team">Financial Analysts Journal (FAJ)</a></p>
-            <p>Email: <a href="mailto:xintongzhan@fudan.edu.cn">xintongzhan@fudan.edu.cn</a> or 
-            <a href="mailto:xintongzhan@hotmail.com">xintongzhan@hotmail.com</a></p>
-            <p>CV: [<a href="#">PDF</a>] | <a href="#">Fudan Web</a> | <a href="#">LinkedIn</a> | <a href="#">ORCiD</a> | <a href="#">Google Scholar</a></p>
-          </div>
+      <!-- 顶部简介 -->
+      <div class="intro-header">
+        <img src="your-photo.jpg" alt="Your photo">
+        <div class="intro-text">
+          <h1>Your Name</h1>
+          <p>Department of Finance, School of Management, Your University</p>
+          <p>Email: <a href="mailto:you@example.com">you@example.com</a> | 
+             <a href="#">CV</a> | 
+             <a href="#">LinkedIn</a> | 
+             <a href="#">Google Scholar</a></p>
         </div>
+      </div>
 
-        <h2 id="employment">Employment</h2>
+      <section id="employment">
+        <h2>Employment</h2>
         <ul>
           <li>Li-Dasan Chair Professor of Finance, Fudan University (2022–present)</li>
-          <li>Assistant Professor of Finance and Real Estate, CUHK (2018–2021)</li>
+          <li>Assistant Professor of Finance, CUHK (2018–2021)</li>
         </ul>
+      </section>
 
-        <h2 id="education">Education</h2>
+      <section id="education">
+        <h2>Education</h2>
         <ul>
           <li>Ph.D. in Finance, CUHK</li>
           <li>B.A. in Finance, Peking University</li>
         </ul>
       </section>
 
+      <section id="publications">
+        <h2>Selected Refereed Publications</h2>
+        <ul>
+          <li>Product Market Threats and Stock Crash Risk (<i>Management Science</i>, 2019)</li>
+          <li>Option Return Predictability (<i>Review of Financial Studies</i>, 2022)</li>
+        </ul>
+      </section>
+
+      <section id="working">
+        <h2>Selected Working Papers (SSRN)</h2>
+        <ul>
+          <li>Forecasting Option Returns with News (AFA 2025)</li>
+        </ul>
+      </section>
+
+      <section id="grants">
+        <h2>Selected Research Grants</h2>
+        <ul><li>NSFC, 2022–2025</li></ul>
+      </section>
+
+      <section id="awards">
+        <h2>Selected Honors & Awards</h2>
+        <ul><li>CFA Institute Prize, 2024</li></ul>
+      </section>
+
       <section id="teaching">
-        <h1>Teaching & Skills</h1>
-        <h2 id="teaching-exp">Teaching Experience</h2>
+        <h2>Teaching & Skills</h2>
         <ul>
           <li>Fudan University: Real Estate Finance</li>
           <li>CUHK: Financial Management</li>
@@ -182,53 +247,59 @@
       </section>
 
       <section id="presentations">
-        <h1>Presentations</h1>
-        <ul><li>AFA 2025 (San Francisco)</li></ul>
+        <h2>Presentations</h2>
+        <ul>
+          <li>AFA 2025 (San Francisco)</li>
+          <li>Hong Kong Fintech Forum 2024</li>
+          <li>Option Trading and Stock Price Informativeness (WFA 2023)</li>
+        </ul>
       </section>
 
       <section id="discussions">
-        <h1>Discussions</h1>
+        <h2>Discussions</h2>
         <ul><li>Discussant, “Network Factors for Idiosyncratic Volatility Spillover,” CICF 2025</li></ul>
       </section>
 
       <section id="chinese">
-        <h1>中文简介</h1>
-        <p>这里填写中文简介内容。</p>
+        <h2>中文简介</h2>
+        <p>这里填写中文简介内容。可以包括教育背景、研究方向、发表论文、获奖情况等。</p>
       </section>
     </main>
   </div>
 
   <script>
     // 平滑滚动
-    document.querySelectorAll('nav a').forEach(anchor=>{
-      anchor.addEventListener('click',function(e){
-        if(this.getAttribute('href').startsWith('#')){
+    document.querySelectorAll('nav a').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        if (this.getAttribute('href').startsWith('#')) {
           e.preventDefault();
-          document.querySelector(this.getAttribute('href')).scrollIntoView({behavior:'smooth'});
+          document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
         }
       });
     });
 
     // 当前高亮
-    window.addEventListener('scroll',()=>{
-      const sections=document.querySelectorAll('section');
-      let current='';
-      sections.forEach(section=>{
-        if(pageYOffset>=section.offsetTop-120){current=section.getAttribute('id');}
+    window.addEventListener('scroll', () => {
+      const sections = document.querySelectorAll('section');
+      let current = '';
+      sections.forEach(section => {
+        if (pageYOffset >= section.offsetTop - 120) {
+          current = section.getAttribute('id');
+        }
       });
-      document.querySelectorAll('nav a').forEach(a=>{
+      document.querySelectorAll('nav a').forEach(a => {
         a.classList.remove('active');
-        if(a.getAttribute('href')===`#${current}`)a.classList.add('active');
+        if (a.getAttribute('href') === `#${current}`) a.classList.add('active');
       });
     });
 
-    // 折叠功能
-    document.querySelectorAll('.collapsible').forEach(item=>{
-      const sublist=item.querySelector('ul');
-      item.addEventListener('click',e=>{
-        if(e.target.tagName.toLowerCase()==='a' && e.target.getAttribute('href').startsWith('#')) return;
-        document.querySelectorAll('.collapsible ul').forEach(u=>{
-          if(u!==sublist)u.classList.remove('expanded');
+    // 折叠功能（点击主类时展开并自动收起其他）
+    document.querySelectorAll('.collapsible').forEach(item => {
+      const sublist = item.querySelector('ul');
+      item.addEventListener('click', e => {
+        if (e.target.tagName.toLowerCase() === 'a' && e.target.getAttribute('href').startsWith('#')) return;
+        document.querySelectorAll('.collapsible ul').forEach(u => {
+          if (u !== sublist) u.classList.remove('expanded');
         });
         sublist.classList.toggle('expanded');
       });
